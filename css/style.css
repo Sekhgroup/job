@@ -462,7 +462,6 @@ body { background: var(--white); }
   overflow: hidden;
 }
 .services-cont{
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
@@ -496,8 +495,46 @@ body { background: var(--white); }
 }
 
 
+.order {
+  background: var(--bright-navy-blue);
+  padding-block: var(--section-padding);
+}
 
+.order-form .input-label {
+  color: var(--white);
+  font-size: var(--fs-4);
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.input-label2{
+  width: 100%;
+  background: var(--white);
+  padding: 16px 20px;
+  font-size: var(--fs-5);
+  border-radius: 50px;
+}
+.order-form .input-field {
+  background: var(--white);
+  padding: 10px 15px;
+  font-size: var(--fs-5);
+  border-radius: 50px;
+}
 
+.order-form .input-field::placeholder { color: var(--spanish-gray); }
+
+.order-form .input-field::-webkit-datetime-edit {
+  color: var(--spanish-gray);
+  text-transform: uppercase;
+}
+
+.order-form .input-wrapper { margin-bottom: 15px; }
+
+.order .btn {
+  width: 100%;
+  --border-width: 1px;
+  font-weight: var(--fw-600);
+  margin-top: 35px;
+}
 
 
 
@@ -805,6 +842,27 @@ address {
     height: 11rem;
 }
 
+
+  /**
+   * TOUR SEARCH
+   */
+
+   .order-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    gap: 15px;
+  }
+
+  .order-form .input-wrapper { margin-bottom: 0; }
+
+  .order-form .input-field { padding: 16px 20px; }
+
+  .order .btn {
+    grid-column: span 2;
+    margin-top: 20px;
+  }
+
   /**
    * FOOTER
    */
@@ -1009,7 +1067,17 @@ address {
 
   .overlay { display: none; }
 
+/**
+   * TOUR SEARCH
+   */
 
+   .order-form { grid-template-columns: repeat(5, 1fr); }
+
+   .order .btn {
+     --padding: 15px;
+     grid-column: unset;
+     margin-top: 0;
+   }
   
 
   /**
