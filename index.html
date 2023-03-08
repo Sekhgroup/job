@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>service</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="images/jini2.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" style="background: rgba(0, 0, 0, 0.641);" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel: +918617360641" class="helpline-box">
+
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquires :</p>
+
+            <p class="helpline-number">+91 8617360641</p>
+          </div>
+
+        </a>
+
+        <a href="#" class="logo">
+          <img src="images/jini1.png" alt="Jini logo">
+        </a>
+
+        <div class="header-btn-group">
+
+          <button class="search-btn" aria-label="Search">
+            <ion-icon name="search"></ion-icon>
+          </button>
+
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100090680199638&mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/+918293077791" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://youtube.com/@jini-hb7ss" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="images/jiniblue.png" alt="Jini logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>about us</a>
+            </li>
+
+            <li>
+              <a href="#service" class="navbar-link" data-nav-link>service</a>
+            </li>
+
+            <li>
+              <a href="#package" class="navbar-link" data-nav-link>packeges</a>
+            </li>
+
+            <li>
+              <a href="#gallery" class="navbar-link" data-nav-link>gallery</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>contact us</a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <button class="btn btn-primary"><a href="https://sekhgroup.github.io/join/">Add Bike</a></button>
+
+      </div>
+    </div>
+
+  </header>
+            <!-- 
+        - #SLIDER
+      -->
+
+      <section class="slider">
+
+        <div class="carousel" data-flickity='{"autoPlay": true, "imagesLoaded":true }'>
+          <div class="carousel-cell">
+            <img src="images/slide_offers/10.jpg" alt="" loading="lazy">
+          </div>
+          <div class="carousel-cell">
+           <img src="images/slide_offers/20.jpg" alt="" loading="lazy">
+          </div>
+          <div class="carousel-cell">
+            <img src="images/slide_offers/30.jpg" alt="" loading="lazy">
+          </div>
+          <!--div class="carousel-cell">
+            <img src="images/slide_offers/slide 4.jpg" alt="" loading="lazy">
+          </div>
+          <div class="carousel-cell">
+            <img src="images/slide_offers/slide 5.jpg" alt="" loading="lazy">
+          </div>
+          <div class="carousel-cell">
+            <img src="images/slide_offers/slide 3.jpg" alt="" loading="lazy">
+          </div>
+          <div class="carousel-cell">
+            <img src="images/slide_offers/slide 7.jpg" alt="" loading="lazy">
+          </div-->							      
+                            
+        </div>    
+      </section>
+      
+                <!-- 
+        - #SERVICES
+      -->  
+     
+      <section class="services">
+        <div class="services-top">
+          <div class="searchbarforservices">
+            <input type="text" style="text-align: center;" id="mySearch" name="search" placeholder="Search any service">
+          </div>
+        </div>
+        <div class="services-box">
+          <ul class="services-cont" id="myList">
+            <li class="service"> <ion-icon name="book-outline"></ion-icon> <p>Accountants</p></li>
+            <li class="service"> <ion-icon name="snow-outline"></ion-icon><p>Ac Mechanic </p></li>
+            <li class="service"> <ion-icon name="videocam-outline"></ion-icon> <p>Actors</p></li>
+            <li class="service"> <ion-icon name="hand-right-outline"></ion-icon> <p>Acupuncturists</p></li>
+            <li class="service"> <ion-icon name="flower-outline"></ion-icon> <p> Agricultur</p></li>
+            <li class="service"> <ion-icon name="brush-outline"></ion-icon> <p> Artists</p></li>
+            <li class="service"> <ion-icon name="accessibility-outline"></ion-icon> <p> Athletes</p></li>
+            <li class="service"> <i class="fa fa-plus"></i></i> <p> Aya</p></li> 
+            <li class="service"> <ion-icon name="radio-outline"></ion-icon> <p> Broadcast</p></li>
+            <li class="service"> <ion-icon name="business-outline"></ion-icon> <p>  Building</p></li>
+            <li class="service"> <ion-icon name="camera-outline"></ion-icon> <p>   Camera Operators</p></li>
+            <li class="service"> <ion-icon name="bed-outline"></ion-icon> <p> Carpenters</p></li>
+            <li class="service"> <ion-icon name="happy-outline"></ion-icon> <p> Cartoonists</p></li>
+            <li class="service"> <ion-icon name="beer-outline"></ion-icon> <p> Chefs</p></li>
+            <li class="service"> <i class="fa fa-child"></i> <p>  Child Care Workers</p></li>
+            <li class="service"> <ion-icon name="film-outline"></ion-icon> <p>  Choreographers</p></li>
+            <li class="service"> <ion-icon name="pencil-outline"></ion-icon> <p> Civil Engineers</p></li>
+            <li class="service"> <ion-icon name="sparkles-outline"></ion-icon> <p> Cleaner</p></li>
+            <li class="service"> <ion-icon name="medkit-outline"></ion-icon> <p> Clinical Service</p></li>
+            <li class="service"> <ion-icon name="football-outline"></ion-icon> <p> Coaches</p></li>
+            <li class="service"> <ion-icon name="color-fill-outline"></ion-icon> <p>Coating</p></li>
+            <li class="service"> <ion-icon name="tv-outline"></ion-icon> <p> Computer Operators</p></li>
+            <li class="service"> <i class="fa fa-code"></i> <p> Computer Programmer</p></li>
+            <li class="service"> <ion-icon name="construct-outline"></ion-icon> <p> Construction</p></li>
+            <li class="service"> <ion-icon name="walk-outline"></ion-icon> <p> Dancers</p></li>
+            <li class="service"> <ion-icon name="logo-gitlab"></ion-icon> <p> Diagnostic Service </p></li>
+            <li class="service"> <ion-icon name="car-outline"></ion-icon> <p>Driver</p></li>
+            <li class="service"> <ion-icon name="cut-outline"></ion-icon> <p> Editors</p></li>
+            <li class="service"> <ion-icon name="flash-outline"></ion-icon> <p>  Electrical Service</p></li>
+            <li class="service"> <ion-icon name="balloon-outline"></ion-icon></i> <p> Event Management </p></li>
+            <li class="service"> <i class="fa fa-bus"></i> <p> Heavy Drivers </p></li>
+            <li class="service"> <i class="fa fa-gavel"></i> <p> lawyer </p></li>
+            <li class="service"> <i class="	fa fa-paint-brush"></i><p> Painter</p></li> 
+            <li class="service"> <i class="fa fa-briefcase"></i> <p> Plumber</p></li> 
+            <li class="service"> <ion-icon name="camera-outline"></ion-icon> <p> Photographer</p></li> 
+            <li class="service"> <i class="fa fa-microphone"></i> <p> vocalist</p></li>
+            <li class="service"> <i class="fa fa-tree"></i> <p> Wood Cutter</p></li> 
+          </ul>          
+        </div>
+        <div class="order-box">order box</div>
+
+
+
+
+
+
+      </section>
+      
+      
+      
+
+      
+      
+      
+        
+        
+        
+
+
+
+
+
+
+     
+
+
+
+
+
+      <!-- 
+        - #GALLERY
+      -->
+
+      <section class="gallery" id="gallery">
+        <div class="container">
+
+          <p class="section-subtitle">Photo Gallery</p>
+
+          <h2 class="h2 section-title">Photo's From Riders</h2>
+
+          <p class="section-text">
+            At Jini, we love to see our customers having the time of their lives on our motorcycles. That's why we encourage riders to share their photos with us from their trips. 
+          </p>
+
+          <ul class="gallery-list">
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="images/gallary/gl4.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="images/gallary/gl5.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="images/gallary/gl2.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="images/gallary/gl1.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item">
+              <figure class="gallery-image">
+                <img src="images/gallary/gl3.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" id="contact">
+        <div class="container">
+
+          <div class="cta-content">
+            <p class="section-subtitle">Call To Action</p>
+
+            <h2 class="h2 section-title">Ready For Unforgatable Ride. Remember Us!</h2>
+
+            <p class="section-text">
+              We believe that every rider deserves to experience the thrill of the open road, and we work hard to provide the best motorcycle rental experience possible. 
+            </p>
+          </div>
+
+          <button class="btn btn-secondary"><a href="tel: +918617360641">Contact Us !</a></button>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="images/jini1.png" alt="Jini logo">
+          </a>
+
+          <p class="footer-text">
+            Thank you for choosing Jini for your motorcycle rental needs. We look forward to being a part of your next adventure and helping you create memories that will last a lifetime!
+          </p>
+          <div style="display: none;"><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=146489&s=10' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">Free website hit counter</a></small></div>
+        </div>
+
+        <div class="footer-contact">
+
+          <h4 class="contact-title">Contact Us</h4>
+
+          <p class="contact-text">
+            Feel free to contact and reach us !!
+          </p>
+
+          <ul>
+
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+
+              <a href="tel: +918617360641" class="contact-link">+91 8617360641</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <a href="mailto: Sekhgroupco@gmail.com" class="contact-link">Sekhgroupco@gmail.com</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+
+              <address>743262 Bongaon, Satberia</address>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-form">
+
+          <p class="form-text">
+            Subscribe our newsletter for more update & news !!
+          </p>
+
+          <form action="https://formsubmit.co/sekhgroupco@gmail.com" method="post"
+          class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email" required>
+
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 <a href="mailto: sekhgroupco@gmail.com" style="color: #d3ddff;">Sekhgroup</a>. All rights reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="pdf/Privacy Policy.pdf" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="pdf/terms and conditions.pdf" class="footer-bottom-link">Term & Condition</a>
+          </li>
+
+          <li>
+            <a href="pdf/FAQ.pdf" class="footer-bottom-link">FAQ</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+
+</html>
