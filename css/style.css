@@ -474,7 +474,7 @@ body { background: var(--white); }
   padding: 5px;
   width: 73px;
   height: 73px;
-  margin: 2px;
+  margin: 5px;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
