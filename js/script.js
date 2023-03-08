@@ -74,3 +74,49 @@ function searchList() {
 document.getElementById("mySearch").addEventListener("keyup", searchList);
 
 
+// ONCLICK SERVICE NAME ENTER IN ORDER FORM 
+
+
+
+// Get all the li elements
+const listItems = document.querySelectorAll('li');
+
+// Attach a click event listener to each li
+listItems.forEach((li) => {
+  li.addEventListener('click', () => {
+    // Get the text of the clicked li
+    const liText = li.innerText;
+    
+    // Update the text of the service_type div with the li text
+    const output = document.getElementById('service_type');
+    output.value = liText;
+    console.log("yes")
+  });
+});
+
+
+
+// ONCLICK  ORDER FORM POPUP
+
+function fn(){
+  let myList = document.getElementById("myList");
+  let popup = document.getElementById("Order");
+
+  if (myList.style.display === "flex") {
+    popup.style.display = "block";
+    myList.style.display = "none";
+  }
+}
+
+
+// POPUP CLOSE FUNCTION 
+
+function Closefn(){
+  let myList = document.getElementById("myList");
+  let popup = document.getElementById("Order");
+
+  if (popup.style.display === "block") {
+    popup.style.display = "none";
+    myList.style.display = "flex";
+}
+}
