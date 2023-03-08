@@ -423,7 +423,7 @@ body { background: var(--white); }
 }
 .carousel-cell {
   width: 100%;
-  height: 7rem;
+  height: 9rem;
 }
 .carousel-cell>img{
   width: 100%;
@@ -1069,7 +1069,7 @@ address {
 
   .container { max-width: 1180px; }
   .carousel-cell {
-    height: 18rem;
+    height: 20rem;
 }
 
 }
