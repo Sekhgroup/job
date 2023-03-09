@@ -101,11 +101,14 @@ listItems.forEach((li) => {
 function fn(){
   let FullBox = document.getElementById("FullBox");
   let popup = document.getElementById("Order");
+  var Service = document.getElementById("Service");
 
   if (FullBox.style.display === "flex") {
     setTimeout(function() {
       popup.style.display = "block";
       FullBox.style.display = "none";
+      popup.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" }); //scroll kore popup div e niye jabe
+      Service.style.backgroundColor = "var(--bright-navy-blue)";
     }, 10); // 2-second delay
   }
 }
@@ -120,5 +123,7 @@ function Closefn(){
   if (popup.style.display === "block") {
     popup.style.display = "none";
     FullBox.style.display = "flex";
+    Service.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" }); //scroll kore popup div e niye jabe
+    Service.style.backgroundColor = "white";
 }
 }
