@@ -443,6 +443,7 @@ body { background: var(--white); }
   border-radius: 36px;
   box-shadow: 0px 0px 20px 10px #3a37375c;
 }
+
 .services-top{
   display: flex;
   flex-direction: row;
@@ -462,6 +463,7 @@ body { background: var(--white); }
   overflow: hidden;
 }
 .services-cont{
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
@@ -487,13 +489,16 @@ body { background: var(--white); }
 }
 .service ion-icon {
   font-size: 30px;
-  color: blue;
+  color: #070791;
 }
 .service .fa{
   font-size: 30px;
-  color: blue;
+  color: #070791;
 }
-
+.icn{
+  width: 80%;
+  height: 50%;
+}
 
 .order {
   background: var(--bright-navy-blue);
@@ -536,7 +541,14 @@ body { background: var(--white); }
   margin-top: 35px;
 }
 
-
+.closeBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 35px;
+    z-index: 0;
+}
 
 
 
@@ -822,7 +834,7 @@ address {
    * HEADER
    */
 
-  .header { padding-top: 83px; }
+  .header { padding-top: 83px;}
 
   .helpline-box .icon-box { padding: 14px; }
 
