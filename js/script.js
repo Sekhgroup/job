@@ -99,12 +99,14 @@ listItems.forEach((li) => {
 // ONCLICK  ORDER FORM POPUP
 
 function fn(){
-  let myList = document.getElementById("myList");
+  let FullBox = document.getElementById("FullBox");
   let popup = document.getElementById("Order");
 
-  if (myList.style.display === "flex") {
-    popup.style.display = "block";
-    myList.style.display = "none";
+  if (FullBox.style.display === "flex") {
+    setTimeout(function() {
+      popup.style.display = "block";
+      FullBox.style.display = "none";
+    }, 10); // 2-second delay
   }
 }
 
@@ -112,11 +114,11 @@ function fn(){
 // POPUP CLOSE FUNCTION 
 
 function Closefn(){
-  let myList = document.getElementById("myList");
+  let FullBox = document.getElementById("FullBox");
   let popup = document.getElementById("Order");
 
   if (popup.style.display === "block") {
     popup.style.display = "none";
-    myList.style.display = "flex";
+    FullBox.style.display = "flex";
 }
 }
