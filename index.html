@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>service</title>
+  <title>Sebakendra</title>
 
   <!-- 
     - favicon
@@ -38,14 +38,14 @@
     - #HEADER
   -->
 
-  <header class="header" style="background: rgba(0, 0, 0, 0.641);" data-header>
+  <header class="header" style="background: var(--oxford-blue);" data-header>
 
     <div class="overlay" data-overlay></div>
 
     <div class="header-top">
       <div class="container">
 
-        <a href="tel: +918617360641" class="helpline-box">
+        <a href="tel: +916294353611" class="helpline-box">
 
           <div class="icon-box">
             <ion-icon name="call-outline"></ion-icon>
@@ -54,13 +54,13 @@
           <div class="wrapper">
             <p class="helpline-title">For Further Inquires :</p>
 
-            <p class="helpline-number">+91 8617360641</p>
+            <p class="helpline-number">+91 6294353611</p>
           </div>
 
         </a>
 
         <a href="#" class="logo">
-          <img src="images/jini1.png" alt="Jini logo">
+          <img src="images/logo.png" alt="Jini logo">
         </a>
 
         <div class="header-btn-group">
@@ -147,7 +147,7 @@
 
         </nav>
 
-        <button class="btn btn-primary"><a href="https://sekhgroup.github.io/join/">Add Bike</a></button>
+        <button class="btn btn-primary"><a href="https://sekhgroup.github.io/join/">Get Jobs</a></button>
 
       </div>
     </div>
@@ -161,13 +161,13 @@
 
         <div class="carousel" data-flickity='{"autoPlay": true, "imagesLoaded":true }'>
           <div class="carousel-cell">
-            <img src="images/slide_offers/10.jpg" alt="" loading="lazy">
+            <img src="images/slide_offers/slide 1.jpg" alt="" loading="lazy">
           </div>
           <div class="carousel-cell">
-           <img src="images/slide_offers/20.jpg" alt="" loading="lazy">
+           <img src="images/slide_offers/slide 2.jpg" alt="" loading="lazy">
           </div>
           <div class="carousel-cell">
-            <img src="images/slide_offers/30.jpg" alt="" loading="lazy">
+            <img src="images/slide_offers/slide 3.jpg" alt="" loading="lazy">
           </div>
           <!--div class="carousel-cell">
             <img src="images/slide_offers/slide 4.jpg" alt="" loading="lazy">
@@ -190,17 +190,19 @@
       -->  
      
       <section class="services">
+        <div class="fullbox" id="FullBox" style="display: flex; flex-direction: column;">
         <div class="services-top">
           <div class="searchbarforservices">
             <input type="text" style="text-align: center;" id="mySearch" name="search" placeholder="Search any service">
           </div>
         </div>
         <div class="services-box">
-          <ul class="services-cont" id="myList" style="display: flex;">
+          <ul class="services-cont" id="myList">
             <li class="service" onclick="fn()"> <ion-icon name="book"></ion-icon> <p>Accountants</p></li>
             <li class="service" onclick="fn()"> <ion-icon name="snow"></ion-icon><p>Ac Mechanic </p></li>
             <li class="service" onclick="fn()"> <ion-icon name="videocam"></ion-icon> <p>Actors</p></li>
             <li class="service" onclick="fn()"> <ion-icon name="hand-right"></ion-icon> <p>Acupuncturists</p></li>
+            <li class="service" onclick="fn()"> <ion-icon name="map"></ion-icon> <p>Amin</p></li>
             <li class="service" onclick="fn()"> <ion-icon name="flower"></ion-icon> <p> Agricultur</p></li>
             <li class="service" onclick="fn()"> <ion-icon name="brush"></ion-icon> <p> Artists</p></li>
             <li class="service" onclick="fn()"> <ion-icon name="accessibility"></ion-icon> <p> Athletes</p></li>
@@ -231,12 +233,13 @@
             <li class="service" onclick="fn()"> <i class="fa fa-gavel"></i> <p> lawyer </p></li>
             <li class="service" onclick="fn()"> <i class="	fa fa-paint-brush"></i><p> Painter</p></li> 
             <li class="service" onclick="fn()"> <i class="fa fa-briefcase"></i> <p> Plumber</p></li> 
-            <li class="service" onclick="fn()"> <ion-icon name="camera"></ion-icon> <p> Photographer</p></li> 
+            <li class="service" onclick="fn()"> <ion-icon name="camera"></ion-icon> <p> Photographer</p></li>
+            <li class="service" onclick="fn()"> <img class="icn" src="images/icon/fridge.png" alt="fridge"> <p> Fridge Repair</p></li> 
             <li class="service" onclick="fn()"> <i class="fa fa-microphone"></i> <p> vocalist</p></li>
             <li class="service" onclick="fn()"> <i class="fa fa-tree"></i> <p> Wood Cutter</p></li> 
           </ul>          
         </div>
-
+        </div>
 
 
 <!-- 
@@ -257,9 +260,15 @@
                 class="input-field">
             </div>
 
+            <div class="input-wrapper">
+              <label for="Problem" class="input-label">Service Details*</label>
+
+              <input type="text" name="Problem" id="Problem" required placeholder="Service Details"
+                class="input-field">
+            </div>
 
             <div class="input-wrapper">
-              <label for="level" class="input-label">Select level</label>
+              <label for="level" class="input-label">Service Man</label>
 
               <select class="input-label2" name="level" id="level">
                 <option value="chose">Select level</option>
@@ -272,14 +281,14 @@
             <div class="input-wrapper">
               <label for="Name" class="input-label">Your Full Name*</label>
 
-              <input type="text" name="Full Name" id="destination" required placeholder="Your full name"
+              <input type="text" name="Full Name" id="Name" required placeholder="Your Full Name"
                 class="input-field">
             </div>
 
             <div class="input-wrapper">
               <label for="Mobile number" class="input-label">Mobile Number*</label>
 
-              <input type="number" name="Mobile Number" id="Number"  placeholder=" your mobile No." class="input-field" pattern="[1-9]{1}[0-9]{9}" required>
+              <input type="tel" name="Mobile Number" id="Number"  placeholder=" Your Mobile No." class="input-field" pattern="[1-9]{1}[0-9]{9}" required>
             </div>
 
             <div class="input-wrapper">
@@ -310,10 +319,11 @@
             </div>
 
             <button type="submit" class="btn btn-secondary">Book now</button>
-            <button onclick="Closefn()"><ion-icon name="close"></ion-icon></button>
+            <p style="color: aliceblue; text-align: center;">We'll contact you very soon (5min-4hour)</p>
+            <button class="btn closeBtn" onclick="Closefn()"><ion-icon name="close-circle-outline"></ion-icon></button>
           </form>
       </div>
-  </div>         
+  </div>      
       </section>
 
 
@@ -344,91 +354,7 @@
 
 
 
-      <!-- 
-        - #GALLERY
-      -->
-
-      <section class="gallery" id="gallery">
-        <div class="container">
-
-          <p class="section-subtitle">Photo Gallery</p>
-
-          <h2 class="h2 section-title">Photo's From Riders</h2>
-
-          <p class="section-text">
-            At Jini, we love to see our customers having the time of their lives on our motorcycles. That's why we encourage riders to share their photos with us from their trips. 
-          </p>
-
-          <ul class="gallery-list">
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="images/gallary/gl4.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="images/gallary/gl5.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="images/gallary/gl2.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="images/gallary/gl1.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="images/gallary/gl3.jpg" alt="Gallery image">
-              </figure>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #CTA
-      -->
-
-      <section class="cta" id="contact">
-        <div class="container">
-
-          <div class="cta-content">
-            <p class="section-subtitle">Call To Action</p>
-
-            <h2 class="h2 section-title">Ready For Unforgatable Ride. Remember Us!</h2>
-
-            <p class="section-text">
-              We believe that every rider deserves to experience the thrill of the open road, and we work hard to provide the best motorcycle rental experience possible. 
-            </p>
-          </div>
-
-          <button class="btn btn-secondary"><a href="tel: +918617360641">Contact Us !</a></button>
-
-        </div>
-      </section>
-
-    </article>
-  </main>
-
-
-
-
-
+      
   <!-- 
     - #FOOTER
   -->
@@ -441,7 +367,7 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="images/jini1.png" alt="Jini logo">
+            <img src="images/logo.png" alt="Jini logo">
           </a>
 
           <p class="footer-text">
@@ -463,7 +389,7 @@
             <li class="contact-item">
               <ion-icon name="call-outline"></ion-icon>
 
-              <a href="tel: +918617360641" class="contact-link">+91 8617360641</a>
+              <a href="tel: +916294353611" class="contact-link">+91 6294353611</a>
             </li>
 
             <li class="contact-item">
