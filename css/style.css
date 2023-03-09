@@ -236,7 +236,7 @@ body { background: var(--white); }
 
 .header.active .header-top {
   position: fixed;
-  background: var(--gunmetal);
+  background: var(--oxford-blue);
 }
 
 .header-top .container {
@@ -636,7 +636,7 @@ body { background: var(--white); }
 \*-----------------------------------*/
 
 .footer-top {
-  background: var(--gunmetal);
+  background: var(--oxford-blue);
   padding-block: var(--section-padding);
   color: var(--gainsboro);
 }
