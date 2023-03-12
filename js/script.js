@@ -130,4 +130,29 @@ function Closefn(){
 
 
 
+// If offline 
+
+var isOnline = navigator.onLine;
+
+function checkInternet() {
+  var myDiv = document.getElementById('slider');
+
+  if (navigator.onLine) {
+    if (!isOnline) {
+      window.location.reload();
+    }
+    myDiv.style.display = 'block';
+  } else {
+    myDiv.style.display = 'none';
+  }
+  
+  isOnline = navigator.onLine;
+}
+
+checkInternet();
+
+window.addEventListener('online', checkInternet);
+window.addEventListener('offline', checkInternet);
+
+
 
