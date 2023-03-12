@@ -125,7 +125,13 @@ html {
   scroll-behavior: smooth;
 }
 
-body { background: var(--white); }
+body {
+  background: var(--white);
+   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 
 
