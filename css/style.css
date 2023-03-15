@@ -275,13 +275,13 @@ body {
   color: var(--white);
 }
 
-.search-btn,
+.android,
 .nav-open-btn {
   font-size: 30px;
   color: inherit;
 }
 
-.search-btn { font-size: 20px; }
+.android { font-size: 30px; }
 
 .header-bottom { border-bottom: 1px solid hsla(0, 0%, 100%, 0.1); }
 
