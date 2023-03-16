@@ -1,0 +1,2 @@
+# disable the server signature
+ServerSignature off
