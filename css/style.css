@@ -437,6 +437,32 @@ body {
 }
 
 
+.blink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.blink-bg{
+  width: 50%;
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+  /* padding: 1rem; */
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  animation: blinkingBackground 5s infinite;
+  cursor: pointer;
+}
+@keyframes blinkingBackground{
+  0%		{ background-color: #10c018;}
+  25%		{ background-color: #1056c0;}
+  50%		{ background-color: #ef0a1a;}
+  75%		{ background-color: #254878;}
+  100%	        { background-color: #04a1d5;}
+}
+
 
 /*-----------------------------------*\
  * #SERVICES
