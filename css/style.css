@@ -459,7 +459,7 @@ body {
   animation: blinkingBg 2s infinite;
 }
 @keyframes blinkingBg{
-  0%		{ background-color: #ffffff;}
+  0%		{ background-color: #97089a;}
   40%		{ background-color: #f72e2e;}
   80%		{ background-color: #00ca4e;}
   1000%	{ background-color: #040fa1;}
