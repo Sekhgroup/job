@@ -126,12 +126,12 @@ html {
 }
 
 body {
-  background: var(--white);
+   background: var(--white);
    user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+ }
 
 
 
@@ -455,7 +455,6 @@ body {
 }
 
 .blink-bg{
-  color: #000;
   animation: blinkingBg 5s infinite;
 }
 @keyframes blinkingBg{
@@ -464,6 +463,7 @@ body {
   80%		{ background-color: #00ca4e;}
   1000%	{ background-color: #040fa1;}
 }
+
 
 
 /*-----------------------------------*\
@@ -662,6 +662,39 @@ body {
 }
 
 
+
+/*-----------------------------------*\
+ * #CAROUSEL-TEXT
+\*-----------------------------------*/
+.carouselForText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.text-carousel{
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-carousel h1 {
+  text-transform: uppercase;
+}
+.text-carousel p {
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 10px
+}
 
 
 
@@ -908,7 +941,9 @@ address {
     grid-column: span 2;
     margin-top: 20px;
   }
-
+  .text-carousel p{
+    font-size: 13px;
+  }
   /**
    * FOOTER
    */
@@ -1019,7 +1054,9 @@ address {
 
   .cta .section-text { margin-inline: 0; }
 
-
+  .text-carousel p{
+    font-size: 16px;
+  }
 
   /**
    * FOOTER
@@ -1132,7 +1169,9 @@ address {
 
   .cta .section-title { max-width: 25ch; }
 
-
+  .text-carousel p{
+    font-size: 20px;
+  }
 
   /**
    * FOOTER
