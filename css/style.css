@@ -666,6 +666,9 @@ body {
 /*-----------------------------------*\
  * #CAROUSEL-TEXT
 \*-----------------------------------*/
+ .flickity-page-dots {
+  display: none;
+}
 .carouselForText{
   display: flex;
   flex-direction: column;
