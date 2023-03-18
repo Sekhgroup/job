@@ -437,30 +437,34 @@ body {
 }
 
 
-.blink{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+/*-----------------------------------*\
+ * #Blink
+\*-----------------------------------*/
+
+.blink-text{
+  color: #000;
+  animation: blinkingText 1s infinite;
 }
+@keyframes blinkingText{
+  0%		{ color: #ffffff;}
+  20%		{ color: #4e90f2;}
+  40%		{ color: #fcfcfc;}
+  60%		{ color: #ff1a31;}
+  80%	  { color: #ffffff;}
+  100%	{ color: #1aff2d;}
+}
+
 .blink-bg{
-  width: 50%;
-  margin-top: 2rem;
-  text-align: center;
-  color: #fff;
-  /* padding: 1rem; */
-  display: inline-block;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  animation: blinkingBackground 5s infinite;
-  cursor: pointer;
+  color: #000;
+  animation: blinkingBg 2s infinite;
 }
-@keyframes blinkingBackground{
-  0%		{ background-color: #10c018;}
-  25%		{ background-color: #1056c0;}
-  50%		{ background-color: #ef0a1a;}
-  75%		{ background-color: #254878;}
-  100%	        { background-color: #04a1d5;}
+@keyframes blinkingBg{
+  0%		{ background-color: #ffffff;}
+  20%		{ background-color: #f72e2e;}
+  40%		{ background-color: #0e4fb7;}
+  60%		{ background-color: #1ecea4;}
+  80%	  { background-color: #188509;}
+  100%	{ background-color: #87aa17;}
 }
 
 
