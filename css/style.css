@@ -456,7 +456,7 @@ body {
 
 .blink-bg{
   color: #000;
-  animation: blinkingBg 2s infinite;
+  animation: blinkingBg 5s infinite;
 }
 @keyframes blinkingBg{
   0%		{ background-color: #97089a;}
