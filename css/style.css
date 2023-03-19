@@ -745,13 +745,13 @@ input {
   height: auto;
 }
 .payment{
-  flex-basis: 30%;
+  flex-basis: 12rem;
   padding: 10px;
   box-sizing: border-box;
 }
 .sebakendraapp{
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 12rem;
   padding: 10px;
   box-sizing: border-box;
   justify-content: center;
@@ -1004,7 +1004,6 @@ address {
   .text-carousel p{
     font-size: 13px;
   }
-
   
   /**
    * FOOTER
@@ -1138,11 +1137,6 @@ address {
 }
 
 
-.payment{
-  flex-basis: 20%;
-  padding: 10px;
-  box-sizing: border-box;
-}
 
 
 /**
@@ -1256,12 +1250,6 @@ address {
 
 }
 
-.payment{
-  flex-basis: 15%;
-}
-.sebakendraapp{
-  flex-basis: 15%;
-}
 
 
 
@@ -1296,10 +1284,4 @@ address {
     height: 20rem;
 }
 
-}
-.payment{
-  flex-basis: 15%;
-}
-.sebakendraapp{
-  flex-basis: 15%;
 }
