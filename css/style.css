@@ -479,7 +479,7 @@ input {
   padding: 5px;
   margin: 10px;
   text-align: center;
-  width: 170px;
+  width: 100%;
   font-weight: bold;
   font-size: var(--fs-4);
   animation: trend 1s infinite;
