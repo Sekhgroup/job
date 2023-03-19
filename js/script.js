@@ -129,30 +129,17 @@ function Closefn(){
 }
 
 
+// TYPING PLACE HOLDER 
 
-// If offline 
-
-var isOnline = navigator.onLine;
-
-function checkInternet() {
-  var myDiv = document.getElementById('slider');
-
-  if (navigator.onLine) {
-    if (!isOnline) {
-      window.location.reload();
-    }
-    myDiv.style.display = 'block';
+var sbar = document.getElementById("mySearch");
+var placeholder = sbar.getAttribute("placeholder");
+var i = 0;
+setInterval(function() {
+  if (i < placeholder.length) {
+    sbar.setAttribute("placeholder", placeholder.slice(0, i) + " |");
+    i++;
   } else {
-    myDiv.style.display = 'none';
+    sbar.setAttribute("placeholder", placeholder.slice(0, i));
+    i = 0;
   }
-  
-  isOnline = navigator.onLine;
-}
-
-checkInternet();
-
-window.addEventListener('online', checkInternet);
-window.addEventListener('offline', checkInternet);
-
-
-
+}, 200);
