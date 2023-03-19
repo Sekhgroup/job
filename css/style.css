@@ -516,10 +516,11 @@ input {
   flex-direction: row;
   justify-content: space-around;
 }
-.searchbarforservices{
+.searchbarforservices {
   padding: 10px;
   border-radius: 20px;
-  border: 1px solid black;
+  border: 2px solid rgb(133 135 187 / 20%);
+  box-shadow: inset 5px 5px 4px rgb(166 155 237 / 50%), 3px 5px 0px rgb(127 141 221 / 10%);
 }
 
 .shortservices{
@@ -733,7 +734,29 @@ input {
   font-size: 10px
 }
 
-
+.payapp{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.payapp img {
+  width: 100%;
+  height: auto;
+}
+.payment{
+  flex-basis: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.sebakendraapp{
+  display: flex;
+  flex-basis: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
 
 /*-----------------------------------*\
  * #FOOTER
@@ -981,6 +1004,8 @@ address {
   .text-carousel p{
     font-size: 13px;
   }
+
+  
   /**
    * FOOTER
    */
@@ -1113,7 +1138,11 @@ address {
 }
 
 
-
+.payment{
+  flex-basis: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+}
 
 
 /**
@@ -1227,7 +1256,12 @@ address {
 
 }
 
-
+.payment{
+  flex-basis: 15%;
+}
+.sebakendraapp{
+  flex-basis: 15%;
+}
 
 
 
@@ -1262,4 +1296,10 @@ address {
     height: 20rem;
 }
 
+}
+.payment{
+  flex-basis: 15%;
+}
+.sebakendraapp{
+  flex-basis: 15%;
 }
