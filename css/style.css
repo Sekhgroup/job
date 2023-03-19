@@ -481,7 +481,7 @@ input {
   text-align: center;
   width: 100%;
   font-weight: bold;
-  font-size: var(--fs-4);
+  font-size: var(--fs-3);
   animation: trend 1s infinite;
 }
 @keyframes trend{
