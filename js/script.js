@@ -51,7 +51,7 @@ window.onload = function() {
   setTimeout(function() {
     var sliderDiv = document.querySelector('.slider');
     sliderDiv.style.display = 'block';
-  }, 500); // 500 milliseconds = .5 seconds
+  }, 800); // 800 milliseconds = .8 seconds
 };
 
 
