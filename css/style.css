@@ -710,9 +710,8 @@ li * {
 }
 
 .closeBtn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+     display: flex;
+    justify-content: flex-end;
     color: red;
     font-size: 35px;
     z-index: 0;
