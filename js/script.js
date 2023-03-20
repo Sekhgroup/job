@@ -45,7 +45,14 @@ window.addEventListener("scroll", function () {
 
 
 
+// loading timing add in carousel
 
+window.onload = function() {
+  setTimeout(function() {
+    var sliderDiv = document.querySelector('.slider');
+    sliderDiv.style.display = 'block';
+  }, 100); // 100 milliseconds = .1 seconds
+};
 
 
 // SEARCH BAR 
