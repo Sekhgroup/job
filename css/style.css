@@ -560,7 +560,15 @@ input {
 .trend-service .icn {
   width: 100%;
 }
+li {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
 
+li * {
+  pointer-events: auto;
+}
 /*-----------------------------------*\
  * #Blink
 \*-----------------------------------*/
