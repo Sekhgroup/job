@@ -74,25 +74,34 @@ function searchList() {
 document.getElementById("mySearch").addEventListener("keyup", searchList);
 
 
-// ONCLICK SERVICE NAME ENTER IN ORDER FORM 
 
 
 
-// Get all the li elements
+
+/*// ONCLICK SERVICE NAME ENTER IN ORDER FORM 
+
+
+// querySelectorAll method to get all the li elements and then use the querySelector method to get the h3 element inside each li element if it exists, otherwise get the text of the li element. Here’s the updated code:*/
+
+// get all the li elements
 const listItems = document.querySelectorAll('li');
 
-// Attach a click event listener to each li
+// attach a click event listener to each li
 listItems.forEach((li) => {
   li.addEventListener('click', () => {
-    // Get the text of the clicked li
-    const liText = li.innerText;
+    // get the h3 element inside the clicked li if it exists, otherwise get the text of the li
+    const h3 = li.querySelector('h3');
+    const text = h3 ? h3.innerText : li.innerText;
     
-    // Update the text of the service_type div with the li text
+    // update the text of the service_type div with the text
     const output = document.getElementById('service_type');
-    output.value = liText;
-    console.log("yes")
+    output.value = text;
+    
+    console.log("yes");
   });
 });
+// This should get the text of the h3 element inside the clicked li element if it exists, otherwise get the text of the li element.
+
 
 
 
