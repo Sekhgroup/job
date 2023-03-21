@@ -731,6 +731,14 @@ li,.sebakendraapp * {
     z-index: 0;
 }
 
+.promoFlex{
+  display: flex;
+}
+.promoGo{
+  font-size: 20px;
+  color: red;
+  margin-left: 5px;
+}
 
 
 /*-----------------------------------*\
