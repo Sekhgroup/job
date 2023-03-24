@@ -1032,8 +1032,9 @@ address {
 }
 
 .go-top:is(:hover, :focus) { opacity: 1; }
-
-
+.goog-te-gadget {
+  display: none;
+}
 
 
 
