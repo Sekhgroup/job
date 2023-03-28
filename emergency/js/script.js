@@ -43,4 +43,34 @@ window.addEventListener("scroll", function () {
 
 /** @@@@@@@@@@@@@ MY CODES START FROM HERE@@@@@@@@@@@@@@@@@@ **/
 
+// select area and get our ambulance 
+
+const locationSelect = document.getElementById("location-select");
+const option1 = document.getElementById('option1');
+const bongaonDiv = document.getElementById("Bongaon");
+const gopalnagarDiv = document.getElementById("Gopalnagar");
+const chandparaDiv = document.getElementById("Chandpara");
+const helenchaDiv = document.getElementById("Helencha");
+const habrahDiv = document.getElementById("Habrah");
+const gobardangaDiv = document.getElementById("Gobardanga");
+
+locationSelect.addEventListener("change", function() {
+  // Hide all divs
+  option1.style.display = "none"
+  bongaonDiv.style.display = "none";
+  gopalnagarDiv.style.display = "none";
+  chandparaDiv.style.display = "none";
+  helenchaDiv.style.display = "none";
+  habrahDiv.style.display = "none";
+  gobardangaDiv.style.display = "none";
+  
+  // Show selected div
+  const hdabm = document.getElementById('hdabm');
+  const selectedLocation = this.value;
+  const selectedDiv = document.getElementById(selectedLocation);
+  selectedDiv.style.display = "flex";
+  // hdabm.style.display = 'none';
+
+});
+// This code will hide all the other divs when a new option is selected, and show only the selected one.
 
