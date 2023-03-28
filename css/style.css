@@ -84,7 +84,16 @@
 /*-----------------------------------*\
  * #RESET
 \*-----------------------------------*/
+li, a {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
 
+/* Enable pointer events for all child elements of li and links */
+li *, a * {
+  pointer-events: auto;
+}
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -566,15 +575,7 @@ input {
 .trend-service .icn {
   width: 100%;
 }
-li,.sebakendraapp {
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  pointer-events: none;
-}
 
-li,.sebakendraapp * {
-  pointer-events: auto;
-}
 /*-----------------------------------*\
  * #Blink
 \*-----------------------------------*/
