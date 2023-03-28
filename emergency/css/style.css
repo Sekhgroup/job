@@ -495,7 +495,16 @@ flex-wrap: wrap;
 justify-content: center;
 align-content: center;
 align-items: center;
-
+}
+#location-select {
+  padding: 15px;
+  border-radius: 20px;
+  background: #000922;
+  color: #ffffff;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  margin: 5px;
 }
 .emergency-service {
 display: flex;
