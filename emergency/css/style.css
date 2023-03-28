@@ -497,14 +497,13 @@ align-content: center;
 align-items: center;
 }
 #location-select {
-  padding: 15px;
-  border-radius: 20px;
-  background: #000922;
-  color: #ffffff;
-  font-weight: 600;
-  outline: none;
-  border: none;
-  margin: 5px;
+    padding: 15px;
+    border-radius: 20px;
+    background: #8b97ed2e;
+    color: #141414;
+    font-weight: 600;
+    outline: none;
+    margin: 5px;
 }
 .emergency-service {
 display: flex;
