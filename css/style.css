@@ -86,8 +86,8 @@
 \*-----------------------------------*/
 li, a {
   -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  pointer-events: none;
+  user-select: auto;
+  pointer-events: auto;
 }
 
 /* Enable pointer events for all child elements of li and links */
