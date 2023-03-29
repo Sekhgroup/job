@@ -482,17 +482,14 @@ input {
     background: #a3d4ff;
     border-radius: 5px;
     padding: 5px 0px;
-}
-.topSerChild p{
-  text-align: center;
-  color: black;
-  font-size: 11px;
+    text-align: center;
+    color: black;
+    font-size: 11px;
 }
 @media (min-width: 580px) {
-  .top-services p{
-    font-size: 1rem;
-  }
+
   .topSerChild a{
+    font-size: 1rem;
     padding: 10px 0;
   }
 }
