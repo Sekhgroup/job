@@ -49,6 +49,7 @@ const locationSelect = document.getElementById("location-select");
 const option1 = document.getElementById('option1');
 const bongaonDiv = document.getElementById("Bongaon");
 const gopalnagarDiv = document.getElementById("Gopalnagar");
+const akaipurDiv = document.getElementById("Akaipur");
 const chandparaDiv = document.getElementById("Chandpara");
 const helenchaDiv = document.getElementById("Helencha");
 const habrahDiv = document.getElementById("Habrah");
@@ -59,6 +60,7 @@ locationSelect.addEventListener("change", function() {
   option1.style.display = "none"
   bongaonDiv.style.display = "none";
   gopalnagarDiv.style.display = "none";
+  akaipurDiv.style.display = "none";
   chandparaDiv.style.display = "none";
   helenchaDiv.style.display = "none";
   habrahDiv.style.display = "none";
