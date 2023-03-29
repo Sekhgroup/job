@@ -461,6 +461,42 @@ input {
   height: 100%;
 }
 /*-----------------------------------*\
+ * #TOP-SERVICES
+\*-----------------------------------*/
+
+.top-services{
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.topSerChild {
+  width: 20%;
+  margin: 3px;
+}
+.topSerChild a{
+    background: #a3d4ff;
+    border-radius: 5px;
+    padding: 5px 0px;
+}
+.top-services p{
+  text-align: center;
+  color: black;
+  font-size: 11px;
+}
+@media (min-width: 580px) {
+  .top-services p{
+    font-size: 1rem;
+  }
+  .topSerChild a{
+    padding: 10px 0;
+  }
+}
+/*-----------------------------------*\
  * #TRENDING
 \*-----------------------------------*/
 .main-trending{
