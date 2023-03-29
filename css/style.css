@@ -84,14 +84,13 @@
 /*-----------------------------------*\
  * #RESET
 \*-----------------------------------*/
-li, a {
+a, button, input[type="submit"], .sebakendraapp, a *, button *, input[type="submit"] *, .sebakendraapp * {
   -webkit-tap-highlight-color: transparent;
-  user-select: auto;
-  pointer-events: auto;
+  user-select: none;
+  pointer-events: none;
 }
 
-/* Enable pointer events for all child elements of li and links */
-li *, a * {
+a *, button *, input[type="submit"] *, .sebakendraapp * {
   pointer-events: auto;
 }
 *, *::before, *::after {
