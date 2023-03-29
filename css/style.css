@@ -84,15 +84,6 @@
 /*-----------------------------------*\
  * #RESET
 \*-----------------------------------*/
-a, button, input[type="submit"], .sebakendraapp, a *, button *, input[type="submit"] *, .sebakendraapp * {
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  pointer-events: none;
-}
-
-a *, button *, input[type="submit"] *, .sebakendraapp * {
-  pointer-events: auto;
-}
 *, *::before, *::after {
   margin: 0;
   padding: 0;
