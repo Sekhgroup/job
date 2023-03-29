@@ -483,7 +483,7 @@ input {
     border-radius: 5px;
     padding: 5px 0px;
 }
-.top-services p{
+.top-services > p{
   text-align: center;
   color: black;
   font-size: 11px;
