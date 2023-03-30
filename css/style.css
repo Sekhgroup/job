@@ -1071,6 +1071,13 @@ address {
     border-radius: 20px;
     padding: 10px 0px;
 }
+.VIpgJd-ZVi9od-LgbsSe, .VIpgJd-ZVi9od-ORHb-bN97Pc, .VIpgJd-ZVi9od-LgbsSe button{
+  display: none;
+}
+.VIpgJd-ZVi9od-ORHb img{
+  display: none;
+}
+
 
 /*-----------------------------------*\
  * #MEDIA QUERIES
