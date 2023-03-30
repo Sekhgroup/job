@@ -784,17 +784,14 @@ address {
 \*-----------------------------------*/
 
 .VIpgJd-ZVi9od-l4eHX-hSRGPd, .VIpgJd-ZVi9od-l4eHX-hSRGPd:link, .VIpgJd-ZVi9od-l4eHX-hSRGPd:visited, .VIpgJd-ZVi9od-l4eHX-hSRGPd:hover, .VIpgJd-ZVi9od-l4eHX-hSRGPd:active {
-  font-size: 12px;
-  font-weight: bold;
-  color: #444;
-  text-decoration: none;
   display: none;
 }
-.skiptranslate .goog-te-gadget {
-  color: red;
-  font-size: 0px;
-  color: transparent;
-  white-space: nowrap;
+.goog-te-gadget .goog-te-combo {
+    margin: 4px 4px;
+    background: #8b97ed2e;
+    outline: none;
+    border-radius: 20px;
+    padding: 14px;
 }
 
 /*-----------------------------------*\
