@@ -787,11 +787,10 @@ address {
   display: none;
 }
 .goog-te-gadget .goog-te-combo {
-    margin: 4px 4px;
     background: #8b97ed2e;
     outline: none;
     border-radius: 20px;
-    padding: 14px;
+    padding: 10px 0px;
 }
 
 /*-----------------------------------*\
