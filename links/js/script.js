@@ -84,3 +84,11 @@ setInterval(function() {
     i = 0;
   }
 }, 200);
+
+// added colours for li links 
+const lis = document.querySelectorAll('#myList li');
+const colors = ['#f5f5f5', '#e3f2fd', '#fce4ec', '#f3e5f5', '#e0f7fa', '#fff8e1', '#e8eaf6', '#f1f8e9', '#ffebee', '#fff3e0'];
+
+for(let i = 0; i < lis.length; i++) {
+  lis[i].style.backgroundColor = colors[i % colors.length];
+}
