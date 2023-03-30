@@ -76,3 +76,29 @@ locationSelect.addEventListener("change", function() {
 });
 // This code will hide all the other divs when a new option is selected, and show only the selected one.
 
+
+
+
+
+// Select the parent element to observe for changes
+var parentElement = document.body;
+
+// Create a new MutationObserver instance
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    // Check if any of the added nodes match the selectors
+    if (mutation.addedNodes) {
+      for (var i = 0; i < mutation.addedNodes.length; i++) {
+        var addedNode = mutation.addedNodes[i];
+        if (addedNode.classList.contains('VIpgJd-ZVi9od-LgbsSe') || addedNode.classList.contains('VIpgJd-ZVi9od-ORHb-bN97Pc') || (addedNode.classList.contains('VIpgJd-ZVi9od-LgbsSe') && addedNode.nodeName.toLowerCase() === 'button')) {
+          // Set the display property of the added node to none
+          addedNode.style.display = 'none';
+        }
+      }
+    }
+  });
+});
+
+// Configure and start the observer
+var observerConfig = { childList: true, subtree: true };
+observer.observe(parentElement, observerConfig);
