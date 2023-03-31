@@ -217,3 +217,21 @@ if (!clickDiv || !hiddenDiv) {
 }
 
 
+
+
+
+
+
+function shareProduct() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Check out this product',
+      text: 'Godrej direct cool refrigerator / single door, good condition, 3 month warranty',
+      url: window.location.href
+    })
+      .then(() => console.log('Product shared successfully'))
+      .catch((error) => console.log('Error sharing product', error));
+  } else {
+    console.log('Web Share API not supported');
+  }
+}
