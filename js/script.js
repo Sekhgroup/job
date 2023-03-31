@@ -178,7 +178,7 @@ if (!clickDiv || !hiddenDiv) {
 // loading timing add in carousel.........................................
 
 // Get the slider div and its images
-var sliderDiv = document.getElementById('slider');
+var sliderDiv = document.getElementById('carousel-cell');
 var images = sliderDiv.getElementsByTagName('img');
 
 // Hide the images initially
