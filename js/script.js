@@ -45,17 +45,56 @@ window.addEventListener("scroll", function () {
 
 
 
-// loading timing add in carousel
+// loading timing add in carousel.........................................
 
-window.onload = function() {
-  setTimeout(function() {
-    var sliderDiv = document.querySelector('.slider');
-    sliderDiv.style.display = 'block';
-  }, 800); // 800 milliseconds = .8 seconds
-};
+// Get the slider div and its images
+var sliderDiv = document.getElementById('slider');
+var images = sliderDiv.getElementsByTagName('img');
+
+// Hide the images initially
+for (var i = 0; i < images.length; i++) {
+  images[i].style.display = 'none';
+}
+
+// Check if all images are loaded
+function areImagesLoaded() {
+  for (var i = 0; i < images.length; i++) {
+    if (!images[i].complete) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Show or hide images based on load status
+function showOrHideImages() {
+  if (areImagesLoaded()) {
+    for (var i = 0; i < images.length; i++) {
+      images[i].style.display = 'block';
+    }
+  } else {
+    for (var i = 0; i < images.length; i++) {
+      images[i].style.display = 'none';
+    }
+  }
+}
+
+// Wait for the slider and its images to load
+window.addEventListener('load', function() {
+  // Show or hide images based on load status
+  showOrHideImages();
+
+  // Add load event listeners to images
+  for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener('load', function() {
+      showOrHideImages();
+    });
+  }
+});
 
 
-// SEARCH BAR 
+
+// SEARCH BAR....................................................................
 
 function searchList() {
   // Get the search term and convert to lowercase
@@ -85,7 +124,7 @@ document.getElementById("mySearch").addEventListener("keyup", searchList);
 
 
 
-/*// ONCLICK SERVICE NAME ENTER IN ORDER FORM 
+/*// ONCLICK SERVICE NAME ENTER IN ORDER FORM ...........................................................................
 
 
 // querySelectorAll method to get all the li elements and then use the querySelector method to get the h3 element inside each li element if it exists, otherwise get the text of the li element. Here’s the updated code:*/
@@ -112,7 +151,7 @@ listItems.forEach((li) => {
 
 
 
-// ONCLICK  ORDER FORM POPUP
+// ONCLICK  ORDER FORM POPUP...............................................................................................
 
 function fn(){
   let FullBox = document.getElementById("FullBox");
@@ -130,7 +169,7 @@ function fn(){
 }
 
 
-// POPUP CLOSE FUNCTION 
+// POPUP CLOSE FUNCTION .......................................................................................................
 
 function Closefn(){
   let FullBox = document.getElementById("FullBox");
@@ -145,7 +184,7 @@ function Closefn(){
 }
 
 
-// TYPING PLACE HOLDER 
+// TYPING PLACE HOLDER ...............................................................................................
 
 var sbar = document.getElementById("mySearch");
 var placeholder = sbar.getAttribute("placeholder");
@@ -161,7 +200,7 @@ setInterval(function() {
 }, 200);
 
 
-// idenhi ivdi balvisi likki 10 arba 
+// idenhi ivdi balvisi likki 10 arba .......................................................................................................
 
 var clickCount = 0;
 var clickDiv = document.getElementById("clickDiv");
