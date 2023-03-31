@@ -78,33 +78,32 @@ function searchList() {
   
   
   
-  /*// ONCLICK Product NAME ENTER IN ORDER FORM 
+  // ONCLICK Product NAME ENTER IN ORDER FORM 
   
   
   // querySelectorAll method to get all the li elements and then use the querySelector method to get the span element inside each li element if it exists, otherwise get the text of the li element. Here’s the updated code:*/
  // get all the li elements
-const listItems = document.querySelectorAll('li');
+ const listItems = document.querySelectorAll('li');
 
-// attach a click event listener to each li
-listItems.forEach((li) => {
-  li.addEventListener('click', () => {
-    // get the span element inside the clicked li if it exists, otherwise get the text of the li
-    const span = li.querySelector('span');
-    const productName = span ? span.innerText : li.innerText;
-    
-    // get the price element inside the clicked li if it exists
-    const price = document.getElementById('productPrice');
-    const productPrice = price.innerText;
-    
-    // update the text of the Product_type and Product_price divs with the productName and productPrice values
-    const outputName = document.getElementById('productName');
-    outputName.value = productName;
-    
-    const outputPrice = document.getElementById('PrdcPrcFrm');
-    outputPrice.value = productPrice;
-  });
-});
-
+ // attach a click event listener to each li
+ listItems.forEach((li) => {
+   li.addEventListener('click', () => {
+     // get the span element inside the clicked li if it exists, otherwise get the text of the li
+     const span = li.querySelector('span');
+     const productName = span ? span.innerText : li.innerText;
+ 
+     // get the price element inside the clicked li if it exists
+     const productPrice = li.querySelector('.productPrice').innerText;
+ 
+     // update the text of the Product_type and Product_price divs with the productName and productPrice values
+     const outputName = document.getElementById('productName');
+     outputName.value = productName;
+ 
+     const outputPrice = document.getElementById('PrdcPrcFrm');
+     outputPrice.value = productPrice;
+   });
+ });
+ 
   
 
   
