@@ -160,3 +160,15 @@ setInterval(function() {
     i = 0;
   }
 }, 200);
+
+
+
+// onclick image zoom  
+
+
+const images = document.querySelectorAll('.product-image');
+images.forEach((image) => {
+  image.addEventListener('click', () => {
+    window.location.href = image.src;
+  });
+});
