@@ -92,3 +92,21 @@ const colors = ['#f5f5f5', '#e3f2fd', '#fce4ec', '#f3e5f5', '#e0f7fa', '#fff8e1'
 for(let i = 0; i < lis.length; i++) {
   lis[i].style.backgroundColor = colors[i % colors.length];
 }
+
+
+// idenhi ivdi balvisi likki 10 arba .............................................................................
+
+var clickCount = 0;
+var clickDiv = document.getElementById("clickDiv");
+var hiddenDiv = document.getElementById("hdn");
+
+if (!clickDiv || !hiddenDiv) {
+  console.error("Could not find clickDiv or hiddenDiv");
+} else {
+  clickDiv.addEventListener("click", function() {
+    clickCount++;
+    if (clickCount === 10) {
+      hiddenDiv.style.display = "block";
+    }
+  });
+}
