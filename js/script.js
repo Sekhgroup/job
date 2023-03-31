@@ -45,52 +45,7 @@ window.addEventListener("scroll", function () {
 
 
 
-// loading timing add in carousel.........................................
 
-// Get the slider div and its images
-var sliderDiv = document.getElementById('slider');
-var images = sliderDiv.getElementsByTagName('img');
-
-// Hide the images initially
-for (var i = 0; i < images.length; i++) {
-  images[i].style.display = 'none';
-}
-
-// Check if all images are loaded
-function areImagesLoaded() {
-  for (var i = 0; i < images.length; i++) {
-    if (!images[i].complete) {
-      return false;
-    }
-  }
-  return true;
-}
-
-// Show or hide images based on load status
-function showOrHideImages() {
-  if (areImagesLoaded()) {
-    for (var i = 0; i < images.length; i++) {
-      images[i].style.display = 'block';
-    }
-  } else {
-    for (var i = 0; i < images.length; i++) {
-      images[i].style.display = 'none';
-    }
-  }
-}
-
-// Wait for the slider and its images to load
-window.addEventListener('load', function() {
-  // Show or hide images based on load status
-  showOrHideImages();
-
-  // Add load event listeners to images
-  for (var i = 0; i < images.length; i++) {
-    images[i].addEventListener('load', function() {
-      showOrHideImages();
-    });
-  }
-});
 
 
 
@@ -217,3 +172,52 @@ if (!clickDiv || !hiddenDiv) {
   });
 }
 
+
+
+
+// loading timing add in carousel.........................................
+
+// Get the slider div and its images
+var sliderDiv = document.getElementById('slider');
+var images = sliderDiv.getElementsByTagName('img');
+
+// Hide the images initially
+for (var i = 0; i < images.length; i++) {
+  images[i].style.display = 'none';
+}
+
+// Check if all images are loaded
+function areImagesLoaded() {
+  for (var i = 0; i < images.length; i++) {
+    if (!images[i].complete) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Show or hide images based on load status
+function showOrHideImages() {
+  if (areImagesLoaded()) {
+    for (var i = 0; i < images.length; i++) {
+      images[i].style.display = 'block';
+    }
+  } else {
+    for (var i = 0; i < images.length; i++) {
+      images[i].style.display = 'none';
+    }
+  }
+}
+
+// Wait for the slider and its images to load
+window.addEventListener('load', function() {
+  // Show or hide images based on load status
+  showOrHideImages();
+
+  // Add load event listeners to images
+  for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener('load', function() {
+      showOrHideImages();
+    });
+  }
+});
