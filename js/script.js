@@ -200,7 +200,7 @@ setInterval(function() {
 }, 200);
 
 
-// idenhi ivdi balvisi likki 10 arba .......................................................................................................
+// idenhi ivdi balvisi likki 10 arba .............................................................................
 
 var clickCount = 0;
 var clickDiv = document.getElementById("clickDiv");
