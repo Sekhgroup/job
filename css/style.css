@@ -671,21 +671,21 @@ input {
   margin: 35px 0px;
 }
 .service{
-  display: flex;
-  padding: 5px;
-  width: 73px;
-  height: 73px;
-  margin: 5px;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  color: black;
-  font-weight: 700;
-  font-size: 10px;
-  text-align: center;
-  cursor: pointer;
-  line-break: auto;
+     display: flex;
+    padding: 5px;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    font-weight: 800;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    line-break: auto;
 }
 .service ion-icon {
   font-size: 30px;
