@@ -444,21 +444,25 @@ input {
 
 
 
-
 /*-----------------------------------*\
  * #SLIDER
 \*-----------------------------------*/
 
 .slider{
-  margin-top: 0;
+  position: relative; /* set parent element to relative position */
 }
 .carousel-cell {
+  position: absolute;
   width: 100%;
   height: 9rem;
 }
 .carousel-cell>img{
-  width: 100%;
-  height: 100%;
+  position: absolute; /* set image elements to absolute position */
+  top: 0; /* align images to top of parent div */
+  left: 0; /* align images to left of parent div */
+  width: 100%; /* set images to fill parent div width */
+  height: 100%; /* set images to fill parent div height */
+  object-fit: cover; /* crop and scale images to fill parent div */
 }
 /*-----------------------------------*\
  * #TOP-SERVICES
