@@ -491,7 +491,8 @@
   padding: 20px;
     font-size: .8rem;
     color: #545454;
-    font-family: cursive;
+    font-family: var(--ff-montserrat);
+    border-left: 2px solid #545454;
 }
 .topTittle{
     display: flex;
