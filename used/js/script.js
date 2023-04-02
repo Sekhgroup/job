@@ -220,13 +220,21 @@ if (!clickDiv || !hiddenDiv) {
 
 
 
+// PRODUCT SHARE LINK 
 
 
-function shareProduct() {
+function shareProduct(button) {
+  // Get the selected li element
+  var selectedLi = button.parentNode.parentNode;
+  
+  // Get the span element inside the li
+  var span = selectedLi.querySelector('span');
+  
+  // Check if Web Share API is supported
   if (navigator.share) {
     navigator.share({
       title: 'Check out this product',
-      text: 'Godrej direct cool refrigerator / single door, good condition, 3 month warranty',
+      text: span.textContent,
       url: window.location.href
     })
       .then(() => console.log('Product shared successfully'))
@@ -234,4 +242,4 @@ function shareProduct() {
   } else {
     console.log('Web Share API not supported');
   }
-}
+};
