@@ -487,6 +487,12 @@
   
 /* TOP TITTLE  */
 
+.top-dialoug{
+  padding: 20px;
+    font-size: .8rem;
+    color: #545454;
+    font-family: cursive;
+}
 .topTittle{
     display: flex;
     box-sizing: border-box;
