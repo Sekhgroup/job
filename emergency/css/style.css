@@ -582,27 +582,9 @@ pointer-events: auto;
 \*-----------------------------------*/
 
 .blink-text{
-  color: #000;
-  animation: blinkingText 10s infinite;
-}
-@keyframes blinkingText{
-  0%    { color: #ffffff;}
-  20%   { color: #4e90f2;}
-  40%   { color: #fcfcfc;}
-  60%   { color: #ff1a31;}
-  80%   { color: #ffffff;}
-  100%  { color: #1aff2d;}
+  color: rgb(255, 255, 255);
 }
 
-.blink-bg{
-  animation: blinkingBg 5s infinite;
-}
-@keyframes blinkingBg{
-  0%    { background-color: #97089a;}
-  40%   { background-color: #f72e2e;}
-  80%   { background-color: #00ca4e;}
-  1000% { background-color: #040fa1;}
-}
 .quick-seba{
   width: 30px;
 }
