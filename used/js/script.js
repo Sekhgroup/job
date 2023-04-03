@@ -220,8 +220,7 @@ if (!clickDiv || !hiddenDiv) {
 
 
 
-// PRODUCT SHARE LINK 
-
+// SHARE PROCUT WITH LINK 
 
 function shareProduct(button) {
   // Get the selected li element
@@ -230,16 +229,18 @@ function shareProduct(button) {
   // Get the span element inside the li
   var span = selectedLi.querySelector('span');
   
-  // Check if Web Share API is supported
-  if (navigator.share) {
-    navigator.share({
-      title: 'Check out this product',
-      text: span.textContent,
-      url: window.location.href
-    })
-      .then(() => console.log('Product shared successfully'))
-      .catch((error) => console.log('Error sharing product', error));
-  } else {
-    console.log('Web Share API not supported');
-  }
-};
+  // Copy product link to clipboard
+  var link = window.location.href;
+  var tempElement = document.createElement('textarea');
+  tempElement.value = link;
+  tempElement.setAttribute('readonly', '');
+  tempElement.style.position = 'absolute';
+  tempElement.style.left = '-9999px';
+  document.body.appendChild(tempElement);
+  tempElement.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempElement);
+  
+  // Show popup
+  alert('Product link copied to clipboard: ' + link + '\nProduct description: ' + span.textContent);
+}
