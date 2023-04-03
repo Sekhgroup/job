@@ -229,18 +229,26 @@ function shareProduct(button) {
   // Get the span element inside the li
   var span = selectedLi.querySelector('span');
   
-  // Copy product link to clipboard
-  var link = window.location.href;
-  var tempElement = document.createElement('textarea');
-  tempElement.value = link;
-  tempElement.setAttribute('readonly', '');
-  tempElement.style.position = 'absolute';
-  tempElement.style.left = '-9999px';
-  document.body.appendChild(tempElement);
-  tempElement.select();
-  document.execCommand('copy');
-  document.body.removeChild(tempElement);
-  
-  // Show popup
-  alert('Product link copied to clipboard: ' + link + '\nProduct description: ' + span.textContent);
-}
+  // Check if Web Share API is supported
+  if (navigator.share) {
+    navigator.share({
+      title: 'Check out this product',
+      text: span.textContent,
+      url: window.location.href
+    })
+      .then(() => console.log('Product shared successfully'))
+      .catch((error) => console.log('Error sharing product', error));
+  } else {
+    console.log('Web Share API not supported');
+    // Create a temporary input element to copy the link to the clipboard
+    var tempInput = document.createElement('input');
+    tempInput.setAttribute('value', window.location.href);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    
+    // Display an alert to inform the user
+    alert('Link copied to clipboard: ' + window.location.href);
+  }
+};
