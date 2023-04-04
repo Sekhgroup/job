@@ -469,13 +469,11 @@
   
 /* TOP TITTLE  */
 
-.top-dialoug{
-  padding: 20px;
-    font-size: .8rem;
-    color: #545454;
-    font-family: var(--ff-montserrat);
-    border-left: 2px solid #545454;
+.top-img img {
+  width: 100%;
+  max-height: 350px;
 }
+
 .topTittle{
     display: flex;
     box-sizing: border-box;
