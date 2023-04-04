@@ -239,16 +239,18 @@ function shareProduct(button) {
       .then(() => console.log('Product shared successfully'))
       .catch((error) => console.log('Error sharing product', error));
   } else {
-    // Check if user agent is a desktop browser
-    if (navigator.userAgent.match(/Windows|Macintosh/i)) {
-      // Copy URL to clipboard and show alert
-      var dummy = document.createElement("textarea");
-      document.body.appendChild(dummy);
-      dummy.value = window.location.href;
-      dummy.select();
-      document.execCommand("copy");
-      document.body.removeChild(dummy);
-      alert("URL copied to clipboard!");
-    }
+    console.log('Web Share API not supported');
+    // Create a temporary input element to copy the link to the clipboard
+    var tempInput = document.createElement('input');
+    tempInput.setAttribute('value', window.location.href);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+
+    // Display an alert to inform the user
+    alert('Link copied to clipboard: ' + window.location.href);
   }
 };
+
+
