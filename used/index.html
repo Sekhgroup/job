@@ -183,10 +183,34 @@
             <input type="text" style="text-align: center;" id="mySearch" name="search" placeholder="Search product . . . .">
           </div>
         </div>
+
+
+        <div class="filterMother">
+
+        
+
+      <select class="input-select" name="area" id="area">
+        <option value="">Select area</option>
+        <option value="bongaon">bongaon</option>
+        <option value="ranaghat">ranaghat</option>             
+      </select>
+  
+  
+      <select class="input-select" id="category">
+        <option value="">Category</option>
+        <option value="computer">computer/laptop</option>
+        <option value="refrigerator">refrigerator</option>
+      </select>
+  
+  </div>
+  
+
+
+
         <div class="services-box">
           <ul class="services-cont" id="myList">
 
-           <li class="service">
+           <li class="service" data-area="bongaon" data-category="computer">
               <div class="product-img-container">
                <img class="product-image" src="images/items/myadd.jpg" alt="ac"> 
                  <button class="share-button" onclick="shareProduct(this)"><i class="fa fa-share"></i></button>
@@ -200,7 +224,7 @@
               </li>
 
 
-            <li class="service">
+            <li class="service" data-area="bongaon" data-category="refrigerator">
                <div class="product-img-container">
                <img class="product-image" src="images/items/fridge1.jpg" alt="ac"> 
                   <button class="share-button" onclick="shareProduct(this)"><i class="fa fa-share"></i></button>
@@ -213,7 +237,7 @@
                </div>
               </li>
 
-              <li class="service">
+              <li class="service" data-area="bongaon" data-category="refrigerator">
                  <div class="product-img-container">
                 <img class="product-image" src="images/items/fridge2.jpg" alt="ac"> 
                     <button class="share-button" onclick="shareProduct(this)"><i class="fa fa-share"></i></button>
@@ -226,7 +250,7 @@
                 </div>
                </li>
 
-               <li class="service">
+               <li class="service" data-area="bongaon" data-category="refrigerator">
                   <div class="product-img-container">
                 <img class="product-image" src="images/items/fridge3.jpg" alt="ac"> 
                      <button class="share-button" onclick="shareProduct(this)"><i class="fa fa-share"></i></button>
@@ -241,7 +265,7 @@
 
 
 
-               <li class="service">
+               <li class="service" data-area="bongaon" data-category="refrigerator">
                   <div class="product-img-container">
                <img class="product-image" src="images/items/fridge4.jpg" alt="Refrigerator"> 
                      <button class="share-button" onclick="shareProduct(this)"><i class="fa fa-share"></i></button>
@@ -257,7 +281,7 @@
 
 
 
-              <li class="service">
+              <li class="service" data-area="bongaon" data-category="refrigerator">
                  <div class="product-img-container">
                <img class="product-image" src="images/items/fridge5.jpg" alt="fridge"> 
                     <button class="share-button" onclick="shareProduct(this)"><i class="fa fa-share"></i></button>
@@ -273,7 +297,7 @@
 
 
 
-              <li class="service">
+              <li class="service" data-area="bongaon" data-category="refrigerator">
                  <div class="product-img-container">
                <img class="product-image" src="images/items/fridge6.jpg" alt="ac"> 
                     <button class="share-button" onclick="shareProduct(this)"><i class="fa fa-share"></i></button>
