@@ -552,7 +552,7 @@ max-height: 350px;
 	padding: 5px;
     border-radius: 20px;
     border: 2px solid rgb(133 135 187 / 20%);
-    box-shadow: inset 5px 5px 4px rgb(166 155 237 / 50%), 3px 5px 0px rgb(127 141 221 / 10%);
+    box-shadow: inset 5px 5px 1px rgb(166 155 237 / 50%), 3px 5px 0px rgb(127 141 221 / 10%);
     margin-left: 5px;
     margin-top: 30px;
     color: #767676;
