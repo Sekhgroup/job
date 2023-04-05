@@ -44,34 +44,81 @@ window.addEventListener("scroll", function () {
 /** @@@@@@@@@@@@@ MY CODES START FROM HERE@@@@@@@@@@@@@@@@@@ **/
 
 
-// SEARCH BAR 
+// SEARCH BAR AND FILTER
 
-function searchList() {
-    // Get the search term and convert to lowercase
-    var input = document.getElementById("mySearch");
-    var filter = input.value.toLowerCase();
-  
-    // Get the list and list items
-    var ul = document.getElementById("myList");
-    var li = ul.getElementsByTagName("li");
-  
-    // Loop through all list items, and hide those that don't match the search query
-    for (var i = 0; i < li.length; i++) {
-      var span = li[i].getElementsByTagName("span")[0];
-      var text = span.textContent.toLowerCase();
-      if (text.indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
+const select = document.getElementById("area");
+const categorySelect = document.getElementById("category");
+const list = document.getElementById("myList");
+
+// Filter by area
+select.addEventListener("change", function() {
+  const selectedValue = this.value;
+  const categorySelectedValue = categorySelect.value;
+  const lis = list.getElementsByTagName("li");
+
+  for (let i = 0; i < lis.length; i++) {
+    const li = lis[i];
+    const span = li.getElementsByTagName("span")[0];
+    const area = li.getAttribute("data-area");
+    const category = li.getAttribute("data-category");
+
+    if ((area === selectedValue || selectedValue === '') && (category === categorySelectedValue || categorySelectedValue === '')) {
+      li.style.display = "block";
+    } else {
+      li.style.display = "none";
     }
   }
-  
-  
-  // Add event listener to the search input
-  document.getElementById("mySearch").addEventListener("keyup", searchList);
-  
-  
+});
+
+// Filter by category
+categorySelect.addEventListener("change", function() {
+  const selectedValue = this.value;
+  const areaSelectedValue = select.value;
+  const lis = list.getElementsByTagName("li");
+
+  for (let i = 0; i < lis.length; i++) {
+    const li = lis[i];
+    const span = li.getElementsByTagName("span")[0];
+    const area = li.getAttribute("data-area");
+    const category = li.getAttribute("data-category");
+
+    if ((category === selectedValue || selectedValue === '') && (area === areaSelectedValue || areaSelectedValue === '')) {
+      li.style.display = "block";
+    } else {
+      li.style.display = "none";
+    }
+  }
+});
+
+// Search
+function searchList() {
+  const input = document.getElementById("mySearch");
+  const filter = input.value.toLowerCase();
+  const lis = list.getElementsByTagName("li");
+
+  for (let i = 0; i < lis.length; i++) {
+    const li = lis[i];
+    const span = li.getElementsByTagName("span")[0];
+    const text = span.textContent.toLowerCase();
+    const area = li.getAttribute("data-area");
+    const category = li.getAttribute("data-category");
+
+    if ((text.indexOf(filter) > -1) && (area === select.value || select.value === '') && (category === categorySelect.value || categorySelect.value === '')) {
+      li.style.display = "block";
+    } else {
+      li.style.display = "none";
+    }
+  }
+}
+
+// Add event listener to the search input
+document.getElementById("mySearch").addEventListener("keyup", searchList);
+
+// Filter on load
+window.onload = function() {
+  searchList();
+};
+
   
   
   
@@ -104,6 +151,7 @@ function searchList() {
    });
  });
  
+
   
 
   
@@ -163,6 +211,7 @@ setInterval(function() {
 
 
 
+
 // onclick image zoom  
 
 
@@ -172,6 +221,7 @@ images.forEach((image) => {
     window.location.href = image.src;
   });
 });
+
 
 
 // nearest image load by user scroll 
@@ -199,6 +249,7 @@ loadimages.forEach(img => {
   observer.observe(img);
 });
 
+
 // idenhi ivdi balvisi likki 10 arba .............................................................................
 
 var clickCount = 0;
@@ -214,6 +265,16 @@ if (!clickDiv || !hiddenDiv) {
       hiddenDiv.style.display = "block";
     }
   });
+}
+
+
+
+// GIV EACH LI UNIC LINK BY JS 
+
+const serviceItems = document.querySelectorAll(".service");
+
+for (let i = 0; i < serviceItems.length; i++) {
+  serviceItems[i].setAttribute("id", `service-item-${i}`);
 }
 
 
