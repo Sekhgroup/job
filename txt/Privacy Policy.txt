@@ -276,8 +276,8 @@ Your information, including Personal Data, is processed at the Company's
 operating offices and in any other places where the parties involved in
 the
 processing are located. It means that this information may be transferred
-to —
-and maintained on — computers located outside of Your state, province,
+to Â—
+and maintained on Â— computers located outside of Your state, province,
 country
 or other governmental jurisdiction where the data protection laws may
 differ
@@ -394,7 +394,7 @@ Contact Us
 ==========
 If you have any questions about this Privacy Policy, You can contact us:
  * By visiting this page on our website:
- <https://sekhgroup.github.io/sebakendra/>
+ <https://sebakendra.in>
 Personal Information: We collect personal information from our clients to
 provide them with our services. This information is kept confidential and
 is not shared with third parties.
