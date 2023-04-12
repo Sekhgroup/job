@@ -243,51 +243,35 @@ if (!clickDiv || !hiddenDiv) {
 
 
 
-// GIV EACH LI UNIC LINK BY JS 
-
-const serviceItems = document.querySelectorAll(".service");
-
-for (let i = 0; i < serviceItems.length; i++) {
-  serviceItems[i].setAttribute("id", `service-item-${i}`);
-}
-
-
-
-
-
-// SHARE PROCUT WITH LINK 
+// share product link 
 
 function shareProduct(button) {
-  // Get the selected li element
-  var selectedLi = button.parentNode.parentNode;
-  
-  // Get the span element inside the li
-  var span = selectedLi.querySelector('span');
-  
+  // Get the current window URL
+  const currentUrl = window.location.href;
+
   // Check if Web Share API is supported
   if (navigator.share) {
     navigator.share({
       title: 'Check out this product',
-      text: span.textContent,
-      url: window.location.href
+      text: 'Here is a link to a product that you might be interested in',
+      url: currentUrl
     })
       .then(() => console.log('Product shared successfully'))
       .catch((error) => console.log('Error sharing product', error));
   } else {
     console.log('Web Share API not supported');
-    // Create a temporary input element to copy the link to the clipboard
-    var tempInput = document.createElement('input');
-    tempInput.setAttribute('value', window.location.href);
+    // Create a temporary input element to copy the URL to the clipboard
+    const tempInput = document.createElement('input');
+    tempInput.setAttribute('value', currentUrl);
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
 
     // Display an alert to inform the user
-    alert('Link copied to clipboard: ' + window.location.href);
+    alert('Link copied to clipboard: ' + currentUrl);
   }
 };
-
 
 
 
