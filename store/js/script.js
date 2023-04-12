@@ -224,32 +224,6 @@ images.forEach((image) => {
 
 
 
-// nearest image load by user scroll 
-
-const loadimages = document.querySelectorAll('img[data-src]');
-
-const options = {
-  threshold: 0,
-  rootMargin: '0px 0px 100px 0px' // Load the image 100px before it enters the viewport
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      const src = img.getAttribute('data-src');
-      img.setAttribute('src', src);
-      img.removeAttribute('data-src');
-      observer.unobserve(img);
-    }
-  });
-}, options);
-
-loadimages.forEach(img => {
-  observer.observe(img);
-});
-
-
 // idenhi ivdi balvisi likki 10 arba .............................................................................
 
 var clickCount = 0;
@@ -313,5 +287,27 @@ function shareProduct(button) {
     alert('Link copied to clipboard: ' + window.location.href);
   }
 };
+
+
+
+
+// loadimages after visit to image 
+
+window.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target.querySelector('.product-image');
+        img.src = img.dataset.src;
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+  const items = document.querySelectorAll('.service');
+  items.forEach((item) => {
+    observer.observe(item);
+  });
+});
+
 
 
