@@ -250,45 +250,54 @@ if (!clickDiv || !hiddenDiv) {
 const serviceItems = document.querySelectorAll(".service");
 
 for (let i = 0; i < serviceItems.length; i++) {
-  serviceItems[i].setAttribute("id", `service-item-${i}`);
-}
+  const spanText = serviceItems[i].querySelector('p span').textContent;
+  const id = `service-item-${i}`;
+  serviceItems[i].setAttribute("id", id);
+  serviceItems[i].setAttribute("data-link", `https://sebakendra.in/store/${id}`);
+};
 
 
 
 
 
-// SHARE PROCUT WITH LINK 
+
+
+
 
 function shareProduct(button) {
   // Get the selected li element
-  var selectedLi = button.parentNode.parentNode;
-  
+  const selectedLi = button.parentNode.parentNode;
+
   // Get the span element inside the li
-  var span = selectedLi.querySelector('span');
-  
+  const span = selectedLi.querySelector('p span');
+
+  // Get the unique link for the li element
+  const link = selectedLi.getAttribute('data-link');
+
   // Check if Web Share API is supported
   if (navigator.share) {
     navigator.share({
       title: 'Check out this product',
       text: span.textContent,
-      url: window.location.href
+      url: link
     })
       .then(() => console.log('Product shared successfully'))
       .catch((error) => console.log('Error sharing product', error));
   } else {
     console.log('Web Share API not supported');
     // Create a temporary input element to copy the link to the clipboard
-    var tempInput = document.createElement('input');
-    tempInput.setAttribute('value', window.location.href);
+    const tempInput = document.createElement('input');
+    tempInput.setAttribute('value', link);
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
 
     // Display an alert to inform the user
-    alert('Link copied to clipboard: ' + window.location.href);
+    alert('Link copied to clipboard: ' + link);
   }
 };
+
 
 
 // loadimages after visit to image 
