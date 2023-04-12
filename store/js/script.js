@@ -268,8 +268,6 @@ function shareProduct(button) {
     document.execCommand('copy');
     document.body.removeChild(tempInput);
 
-    // Display an alert to inform the user
-    alert('Link copied to clipboard: ' + currentUrl);
   }
 };
 
