@@ -253,7 +253,7 @@ for (let i = 0; i < serviceItems.length; i++) {
   const spanText = serviceItems[i].querySelector('p span').textContent;
   const id = `service-item-${i}`;
   serviceItems[i].setAttribute("id", id);
-  serviceItems[i].setAttribute("data-link", `https://sebakendra.in/store/${id}`);
+  serviceItems[i].setAttribute("data-link", `https://sebakendra.in/used/${id}`);
 };
 
 
