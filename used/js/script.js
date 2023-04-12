@@ -245,59 +245,35 @@ if (!clickDiv || !hiddenDiv) {
 
 
 
-// GIV EACH LI UNIC LINK BY JS 
-
-const serviceItems = document.querySelectorAll(".service");
-
-for (let i = 0; i < serviceItems.length; i++) {
-  const spanText = serviceItems[i].querySelector('p span').textContent;
-  const id = `service-item-${i}`;
-  serviceItems[i].setAttribute("id", id);
-  serviceItems[i].setAttribute("data-link", `https://sebakendra.in/used/${id}`);
-};
-
-
-
-
-
-
-
-
+// share product link 
 
 function shareProduct(button) {
-  // Get the selected li element
-  const selectedLi = button.parentNode.parentNode;
-
-  // Get the span element inside the li
-  const span = selectedLi.querySelector('p span');
-
-  // Get the unique link for the li element
-  const link = selectedLi.getAttribute('data-link');
+  // Get the current window URL
+  const currentUrl = window.location.href;
 
   // Check if Web Share API is supported
   if (navigator.share) {
     navigator.share({
       title: 'Check out this product',
-      text: span.textContent,
-      url: link
+      text: 'Here is a link to a product that you might be interested in',
+      url: currentUrl
     })
       .then(() => console.log('Product shared successfully'))
       .catch((error) => console.log('Error sharing product', error));
   } else {
     console.log('Web Share API not supported');
-    // Create a temporary input element to copy the link to the clipboard
+    // Create a temporary input element to copy the URL to the clipboard
     const tempInput = document.createElement('input');
-    tempInput.setAttribute('value', link);
+    tempInput.setAttribute('value', currentUrl);
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
 
     // Display an alert to inform the user
-    alert('Link copied to clipboard: ' + link);
+    alert('Link copied to clipboard: ' + currentUrl);
   }
 };
-
 
 
 // loadimages after visit to image 
