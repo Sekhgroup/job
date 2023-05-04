@@ -80,7 +80,6 @@ body{
 @media (max-width: 580px) {
     .occupation,input{
         width: 260px;
-        height: 20px;
     }
     #orderForm{
         align-items: center;
