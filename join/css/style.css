@@ -1,0 +1,111 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "apercu",sans-serif;
+    /* "apercu",sans-serif */
+}
+.mother{
+    display: flex;
+    background: #92b1ef82;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner{
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+#orderForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+}
+.occupation,input{
+    border-radius: 10px;
+    width: 500px;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+}
+.FullAd{
+    height: 65px;
+}
+.Lc{
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+}
+.do{
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    margin: 8px;
+}
+.btn2{
+	width: 90px;
+    height: 40px;
+    color: black;
+    background: rgb(255 145 0);
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+#terms{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #ff2659;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+#terms:hover{
+    color: #9e0025;
+}
+@media (max-width: 580px) {
+    input{
+        width: 260px;
+        height: 20px;
+    }
+    #orderForm{
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        justify-content: center;
+    }
+}
+
+/*-----------------------------------*\
+ * #GOOGLE TRANSLATE
+\*-----------------------------------*/
+
+.VIpgJd-ZVi9od-l4eHX-hSRGPd, .VIpgJd-ZVi9od-l4eHX-hSRGPd:link, .VIpgJd-ZVi9od-l4eHX-hSRGPd:visited, .VIpgJd-ZVi9od-l4eHX-hSRGPd:hover, .VIpgJd-ZVi9od-l4eHX-hSRGPd:active {
+    display: none;
+  }
+  .goog-te-gadget .goog-te-combo {
+      background: #fdfdfd;
+      outline: none;
+      border-radius: 20px;
+      padding: 10px 0px;
+  }
+  .VIpgJd-ZVi9od-LgbsSe, .VIpgJd-ZVi9od-ORHb-bN97Pc, .VIpgJd-ZVi9od-LgbsSe button{
+    display: none;
+  }
+  .VIpgJd-ZVi9od-ORHb img{
+    display: none;
+  }
