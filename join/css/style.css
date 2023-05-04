@@ -78,7 +78,7 @@ body{
     color: #9e0025;
 }
 @media (max-width: 580px) {
-    input{
+    .occupation,input{
         width: 260px;
         height: 20px;
     }
