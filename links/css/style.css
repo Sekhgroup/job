@@ -498,6 +498,11 @@ input {
   justify-content: center;
   margin: 35px 0px;
 }
+.rd{background-color: rgb(250, 184, 184);}
+.blu{background-color: rgb(186, 186, 252);}
+.ylw{background-color: rgb(244, 220, 9);}
+.pnk{background-color: rgb(249, 85, 247);}
+.sky{background-color: rgb(164, 226, 251);}
 .service{
   display: flex;
     padding: 5px;
@@ -514,8 +519,24 @@ input {
     text-align: center;
     cursor: pointer;
     line-break: auto;
-    background: #9bc3ff9c;
 }
+.service2{
+    display: flex;
+    width: 300px;
+    height: 175px;
+    margin: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    line-break: auto;
+    color: #ffffff;
+    background-color: rgb(1, 1, 62);
+}
+
 .service a {
   color: #000;
 }
