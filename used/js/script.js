@@ -41,7 +41,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-/** @@@@@@@@@@@@@ MY CODES START FROM HERE@@@@@@@@@@@@@@@@@@ **/
+/* @@@@@@@@@@@@@ MY CODES START FROM HERE@@@@@@@@@@@@@@@@@@ */
 
 
 // SEARCH BAR AND FILTER
@@ -224,8 +224,6 @@ images.forEach((image) => {
 
 
 
-
-
 // idenhi ivdi balvisi likki 10 arba .............................................................................
 
 var clickCount = 0;
@@ -269,8 +267,10 @@ function shareProduct(button) {
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
+
   }
 };
+
 
 
 // loadimages after visit to image 
@@ -295,43 +295,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 ////// SHORT BY PRICE ////////
 
-const selectShort = document.getElementById('short');
+// Get all the product items
+const productItems = document.querySelectorAll('.service');
 
-selectShort.addEventListener('change', function() {
-  const selectedValue = this.value;
-  
-  // Get all the product items
-  const productItems = document.querySelectorAll('.service');
-  
-  // Convert the NodeList to an array for easier manipulation
-  const productArray = Array.from(productItems);
-  
-  // Sort the product items based on the selected option
-  if (selectedValue === 'price-low_to_high') {
-    productArray.sort((a, b) => {
-      const priceA = parseInt(a.querySelector('.productPrice').textContent.trim().slice(4));
-      const priceB = parseInt(b.querySelector('.productPrice').textContent.trim().slice(4));
-      return priceA - priceB;
-    });
-  } else if (selectedValue === 'price_high_to_low') {
-    productArray.sort((a, b) => {
-      const priceA = parseInt(a.querySelector('.productPrice').textContent.trim().slice(4));
-      const priceB = parseInt(b.querySelector('.productPrice').textContent.trim().slice(4));
-      return priceB - priceA;
-    });
-  }
-  
-  // Clear the existing product list
-  const productList = document.getElementById('myList');
-  productList.innerHTML = '';
-  
-  // Append the sorted product items to the product list
-  productArray.forEach(item => {
-    productList.appendChild(item);
-  });
+// Convert the NodeList to an array for easier manipulation
+const productArray = Array.from(productItems);
+
+// Sort the product items based on the product price
+productArray.sort((a, b) => {
+  const priceA = parseInt(a.querySelector('.productPrice').textContent.trim().slice(4));
+  const priceB = parseInt(b.querySelector('.productPrice').textContent.trim().slice(4));
+  return priceA - priceB;
 });
 
+// Clear the existing product list
+const productList = document.getElementById('myList');
+productList.innerHTML = '';
+
+// Append the sorted product items to the product list
+productArray.forEach(item => {
+  productList.appendChild(item);
+});
