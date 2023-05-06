@@ -290,3 +290,48 @@ window.addEventListener('DOMContentLoaded', () => {
     observer.observe(item);
   });
 });
+
+
+
+
+
+
+
+////// SHORT BY PRICE ////////
+
+const selectShort = document.getElementById('short');
+
+selectShort.addEventListener('change', function() {
+  const selectedValue = this.value;
+  
+  // Get all the product items
+  const productItems = document.querySelectorAll('.service');
+  
+  // Convert the NodeList to an array for easier manipulation
+  const productArray = Array.from(productItems);
+  
+  // Sort the product items based on the selected option
+  if (selectedValue === 'price-low_to_high') {
+    productArray.sort((a, b) => {
+      const priceA = parseInt(a.querySelector('.productPrice').textContent.trim().slice(4));
+      const priceB = parseInt(b.querySelector('.productPrice').textContent.trim().slice(4));
+      return priceA - priceB;
+    });
+  } else if (selectedValue === 'price_high_to_low') {
+    productArray.sort((a, b) => {
+      const priceA = parseInt(a.querySelector('.productPrice').textContent.trim().slice(4));
+      const priceB = parseInt(b.querySelector('.productPrice').textContent.trim().slice(4));
+      return priceB - priceA;
+    });
+  }
+  
+  // Clear the existing product list
+  const productList = document.getElementById('myList');
+  productList.innerHTML = '';
+  
+  // Append the sorted product items to the product list
+  productArray.forEach(item => {
+    productList.appendChild(item);
+  });
+});
+
