@@ -660,21 +660,28 @@ input {
 
 
 .service{
-    border-radius: 20px;
+  border-radius: 20px;
     display: flex;
-    width: 150px;
-    height: 180px;
+    width: 130px;
+    height: 100px;
     flex-direction: column;
-    margin: 5px;
+    margin: 15px;
     cursor: pointer;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 5px #5a5a5c;
 }
 .service:hover{
 	background-color: #ffffff;
 }
 .service>p{
-	font-size: 9px;
-    font-weight: 200;
-    color: #727272;
+	  display: none;
+}
+.miniprice{
+  font-size: 11px;
+  color: #3b9304;
+  font-weight: 800;
+
 }
 .service-top{
 	display: flex;
@@ -685,7 +692,6 @@ input {
     justify-content: flex-start;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    border-bottom: 2px solid #7675ff;
     padding: 5px 0;
 }
 .service-top>h3{
@@ -723,17 +729,12 @@ input {
   height: 50%;
 }
 @media (min-width: 580px) {
-  .service{
-    width: 200px;
-    height: 230px;
-  }
-  .service>p{
-    font-size: 11px;
-  }
-  .service>span{
-    font-size: 13px;
-  }
+  
 }
+
+
+
+
 
 
 
@@ -745,7 +746,19 @@ input {
   background: var(--bright-navy-blue);
   padding-block: var(--section-padding);
 }
-
+#task-details{
+  display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    overflow: hidden;
+    padding: 7px;
+    align-items: center;
+    font-weight: 100;
+    color: #585858;
+    font-size: 13px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
 .order-form .input-label {
   color: var(--white);
   font-size: var(--fs-4);
