@@ -519,6 +519,7 @@ input {
     text-align: center;
     cursor: pointer;
     line-break: auto;
+    box-shadow: 2px 2px 5px black;
 }
 .service2{
     display: flex;
