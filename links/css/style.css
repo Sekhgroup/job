@@ -505,21 +505,22 @@ input {
 .sky{background-color: rgb(164, 226, 251);}
 .service{
   display: flex;
-    padding: 5px;
-    width: 145px;
-    height: 75px;
-    margin: 5px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    font-weight: 700;
-    font-size: 12px;
-    border-radius: 15px;
-    text-align: center;
-    cursor: pointer;
-    line-break: auto;
-    box-shadow: 2px 2px 5px black;
+  padding: 5px;
+  width: 145px;
+  height: 75px;
+  margin: 5px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  line-break: auto;
+  color: #000000c7;
+  box-shadow: 2px 2px 5px black;
 }
 .service2{
     display: flex;
@@ -538,9 +539,6 @@ input {
     background-color: rgb(1, 1, 62);
 }
 
-.service a {
-  color: #000;
-}
 
 /*-----------------------------------*\
  * #FOOTER
