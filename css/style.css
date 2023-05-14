@@ -1496,3 +1496,25 @@ address {
 }
 
 }
+
+
+
+.glow {
+  animation: glowing 1300ms infinite;
+  
+}
+@keyframes glowing {
+  0% {
+    
+    box-shadow: 0 0 1px #0835ff;
+  }
+  50% {
+    
+    box-shadow: 0 0 20px #0835ff;
+  }
+  100% {
+    
+    box-shadow: 0 0 1px #0835ff;
+  }
+}
+
