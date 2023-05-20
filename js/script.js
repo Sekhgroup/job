@@ -177,3 +177,55 @@ if (!clickDiv || !hiddenDiv) {
     }
   });
 }
+
+
+
+
+
+
+
+//******************************************** DYNAMIC CITY APPEAR BY DISTRICT********************************* */
+
+ // Get the first select input
+ const districtSelect = document.getElementById('District');
+
+ // Get the second select input
+ const citySelect = document.getElementById('City');
+
+ // Define the cities for each district
+ const cities = {
+   N_24_PGS: ['Akaipur', 'Helencha', 'Chandpara', 'Habra', 'Gobardanga','Bongaon', 'Gopalnagar'],
+   Bardhaman: ['Fatepur', ],
+ };
+
+ // Function to populate the city select input based on the selected district
+ function populateCities() {
+   // Clear the city select input
+   citySelect.innerHTML = '';
+
+   // Get the selected district
+   const selecteddistrict = districtSelect.value;
+
+   // If a valid district is selected, populate the city select input
+   if (selecteddistrict !== 'chose') {
+     // Get the cities for the selected district
+     const districtCities = cities[selecteddistrict];
+
+     // Create option elements for each city and append them to the city select input
+     districtCities.forEach(city => {
+       const option = document.createElement('option');
+       option.value = city;
+       option.text = city;
+       citySelect.appendChild(option);
+     });
+
+     // Show the city select input
+     citySelect.style.display = 'block';
+   } else {
+     // Hide the city select input if no district is selected
+     citySelect.innerHTML = '';
+   }
+ }
+
+ // Add an event listener to the district select input
+ districtSelect.addEventListener('change', populateCities);
