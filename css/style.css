@@ -710,8 +710,8 @@ input {
 .div_icon{
     display: flex;
     align-items: center;
-	  width: 50px;
-    height: 50px;
+    width: 50px;
+    height: 40px;
     padding: 2px;
 }
 .div_icon>img{
