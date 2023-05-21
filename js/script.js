@@ -195,7 +195,7 @@ if (!clickDiv || !hiddenDiv) {
  // Define the cities for each district
  const cities = {
    N_24_PGS: ['Select City', 'Akaipur', 'Helencha', 'Chandpara', 'Habra', 'Gobardanga','Bongaon', 'Gopalnagar'],
-   Bardhaman: ['Select City', 'Fatepur', ],
+   S_24_PGS: ['Select City', 'Fatepur', ],
  };
 
  // Function to populate the city select input based on the selected district
