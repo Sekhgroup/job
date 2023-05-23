@@ -17,27 +17,3 @@ if (!clickDiv || !hiddenDiv) {
 
 
 
-//***************one time click and text change submit button for booking***************************** */
-
-document.addEventListener("DOMContentLoaded", function() {
-    var button = document.querySelector('button[type="submit"]');
-    button.addEventListener("click", function() {
-      setTimeout(function() {
-        disableButton();
-      }, 200); // 200 milliseconds = .2 second
-    });
-  
-    function disableButton() {
-      button.disabled = true;
-      button.style.background = "#4ff918";
-      var originalText = button.innerHTML;
-      var dots = 0;
-      button.innerHTML = "Wait";
-  
-      var intervalId = setInterval(function() {
-        dots = (dots + 1) % 4;
-        button.innerHTML = "Wait" + Array(dots + 1).join(".");
-      }, 500); // 500 milliseconds = 0.5 second
-    }
-  });
-  
