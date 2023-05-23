@@ -17,11 +17,10 @@ if (!clickDiv || !hiddenDiv) {
 
 
 
-
-//***************one time click and text change submit button***************************** */
+//***************one time click and text change submit button for booking***************************** */
 
 document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("formSubmit");
+    var button = document.querySelector('button[type="submit"]');
     button.addEventListener("click", function() {
       setTimeout(function() {
         disableButton();
@@ -33,19 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
       button.style.background = "#4ff918";
       var originalText = button.innerHTML;
       var dots = 0;
-      button.innerHTML = "Submitting";
+      button.innerHTML = "Wait";
   
       var intervalId = setInterval(function() {
         dots = (dots + 1) % 4;
-        button.innerHTML = "Submitting" + Array(dots + 1).join(".");
+        button.innerHTML = "Wait" + Array(dots + 1).join(".");
       }, 500); // 500 milliseconds = 0.5 second
-  
-      // Simulating asynchronous task completion
-      setTimeout(function() {
-        clearInterval(intervalId);
-        button.innerHTML = "Submitted!";
-        // Perform additional submission logic here
-      }, 3000); // Simulating 3 seconds of submission time
     }
   });
   
