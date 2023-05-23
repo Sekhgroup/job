@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 html{
     scroll-behavior: smooth;
 }
@@ -5,15 +6,19 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "apercu",sans-serif;
+    font-family: "poppin",sans-serif;
     /* "apercu",sans-serif */
+    
 }
 .mother{
     display: flex;
-    background: #92b1ef82;
+    /* background: #92b1ef82; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('https://cdn.dribbble.com/users/2003490/screenshots/4931076/the-house-on-the-hill.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .banner{
     width: 200px;
@@ -86,6 +91,11 @@ body{
         justify-content: center;
         position: relative;
         justify-content: center;
+    }
+    .mother{
+        background-image: url('https://media1.giphy.com/media/TZ2oBnEvY9iMgJWuRS/giphy.gif?cid=6c09b95291790d2a496e5886d1193d54fea6f6e10d03b49c&ep=v1_internal_gifs_gifId&rid=giphy.gif&ct=g');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     }
 }
 
