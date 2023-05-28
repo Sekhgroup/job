@@ -63,7 +63,7 @@ select.addEventListener("change", function() {
     const category = li.getAttribute("data-category");
 
     if ((area === selectedValue || selectedValue === '') && (category === categorySelectedValue || categorySelectedValue === '')) {
-      li.style.display = "block";
+      li.style.display = "flex";
     } else {
       li.style.display = "none";
     }
@@ -83,7 +83,7 @@ categorySelect.addEventListener("change", function() {
     const category = li.getAttribute("data-category");
 
     if ((category === selectedValue || selectedValue === '') && (area === areaSelectedValue || areaSelectedValue === '')) {
-      li.style.display = "block";
+      li.style.display = "flex";
     } else {
       li.style.display = "none";
     }
@@ -104,7 +104,7 @@ function searchList() {
     const category = li.getAttribute("data-category");
 
     if ((text.indexOf(filter) > -1) && (area === select.value || select.value === '') && (category === categorySelect.value || categorySelect.value === '')) {
-      li.style.display = "block";
+      li.style.display = "flex";
     } else {
       li.style.display = "none";
     }
