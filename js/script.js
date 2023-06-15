@@ -184,51 +184,52 @@ if (!clickDiv || !hiddenDiv) {
 
 
 
-//******************************************** DYNAMIC CITY APPEAR BY DISTRICT********************************* */
+//******************************************** DYNAMIC Block APPEAR BY DISTRICT********************************* */
 
  // Get the first select input
  const districtSelect = document.getElementById('District');
 
  // Get the second select input
- const citySelect = document.getElementById('City');
+ const BlockSelect = document.getElementById('Block');
 
- // Define the cities for each district
- const cities = {
-   N_24_PGS: ['Select City', 'Akaipur', 'Helencha', 'Chandpara', 'Habra', 'Gobardanga','Bongaon', 'Gopalnagar'],
-   S_24_PGS: ['Select City', 'Fatepur', ],
+ // Define the Blocks for each district
+ const Blocks = {
+   N_24_PGS: ['Select Block/City', 'Akaipur','Balia','Bongaon','Bhashanpota', 'Chowberia', 'Chandpara','Chhaigharia','Ganrapota','Gobardanga', 'Gopalnagar','Habra','Helencha','Kalupur','Media Bazar','Nahata','Nataberia','Palla','Thakurnagar'],
+   S_24_PGS: ['Upcoming soon', ],
+   Nadia: ['Select Block/City','Gangnapur','Kupars','Majhergram','Rainagar','Ranaghat']
  };
 
- // Function to populate the city select input based on the selected district
- function populateCities() {
-   // Clear the city select input
-   citySelect.innerHTML = '';
+ // Function to populate the Block select input based on the selected district
+ function populateBlocks() {
+   // Clear the Block select input
+   BlockSelect.innerHTML = '';
 
    // Get the selected district
    const selecteddistrict = districtSelect.value;
 
-   // If a valid district is selected, populate the city select input
+   // If a valid district is selected, populate the Block select input
    if (selecteddistrict !== 'chose') {
-     // Get the cities for the selected district
-     const districtCities = cities[selecteddistrict];
+     // Get the Blocks for the selected district
+     const districtBlocks = Blocks[selecteddistrict];
 
-     // Create option elements for each city and append them to the city select input
-     districtCities.forEach(city => {
+     // Create option elements for each Block and append them to the Block select input
+     districtBlocks.forEach(Block => {
        const option = document.createElement('option');
-       option.value = city;
-       option.text = city;
-       citySelect.appendChild(option);
+       option.value = Block;
+       option.text = Block;
+       BlockSelect.appendChild(option);
      });
 
-     // Show the city select input
-     citySelect.style.display = 'block';
+     // Show the Block select input
+     BlockSelect.style.display = 'block';
    } else {
-     // Hide the city select input if no district is selected
-     citySelect.innerHTML = '';
+     // Hide the Block select input if no district is selected
+     BlockSelect.innerHTML = '';
    }
  }
 
  // Add an event listener to the district select input
- districtSelect.addEventListener('change', populateCities);
+ districtSelect.addEventListener('change', populateBlocks);
 
 
 
